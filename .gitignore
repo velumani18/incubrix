@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.pytest_cache/
+node_modules/
+dist/
+.DS_Store
+data/uploads/*.mp4
+data/outputs/*.mp4
+test_pack/batch_results/
+test_pack/results/

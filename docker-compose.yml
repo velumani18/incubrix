@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  incubrix-editor:
+    build: .
+    container_name: incubrix_video_editor
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - PORT=8000
+      - HOST=0.0.0.0
+      - TIME_POLICY=SOURCE_TIME
+      - STT_PROVIDER=mock
+      - WEBHOOK_SECRET=incubrix-secret-test-key-2026
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
