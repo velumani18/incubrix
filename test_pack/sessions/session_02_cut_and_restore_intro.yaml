@@ -1,0 +1,5 @@
+video: data/uploads/sample_test_video.mp4
+steps:
+- say: Cut the first 30 seconds
+- say: Actually, put the intro back
+- say: render

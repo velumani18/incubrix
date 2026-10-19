@@ -1,0 +1,5 @@
+video: data/uploads/sample_test_video.mp4
+steps:
+- say: Add a caption 'Intro Note' at 0:10
+- say: Cut the first 5 seconds
+- say: Make that caption blue

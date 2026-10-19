@@ -1,0 +1,5 @@
+video: data/uploads/sample_test_video.mp4
+steps:
+- say: Add a caption 'Spotlight' at 0:20
+- say: Make that caption yellow
+- say: Make that caption bigger

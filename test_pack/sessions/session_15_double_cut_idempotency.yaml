@@ -1,0 +1,4 @@
+video: data/uploads/sample_test_video.mp4
+steps:
+- say: Cut from 0:30 to 0:40
+- say: Cut from 0:30 to 0:40

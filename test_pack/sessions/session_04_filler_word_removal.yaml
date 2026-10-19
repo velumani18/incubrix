@@ -1,0 +1,4 @@
+video: data/uploads/sample_test_video.mp4
+steps:
+- say: Remove filler words
+- say: render

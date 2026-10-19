@@ -1,0 +1,4 @@
+video: data/uploads/sample_test_video.mp4
+steps:
+- say: Speed up from 0:10 to 0:40 by 2x
+- say: Cut from 0:50 to 1:00

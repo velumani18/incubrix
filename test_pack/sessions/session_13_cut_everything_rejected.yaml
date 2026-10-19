@@ -1,0 +1,3 @@
+video: data/uploads/sample_test_video.mp4
+steps:
+- say: Cut everything
