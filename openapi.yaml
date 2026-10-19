@@ -1,0 +1,225 @@
+openapi: 3.1.0
+info:
+  title: IncuBrix Video Editing Engine API
+  version: 1.0.0
+  description: API contract for the IncuBrix prompt-based non-destructive video editing engine.
+servers:
+  - url: http://localhost:8000
+    description: Local development / test server
+paths:
+  /health:
+    get:
+      tags: [Health]
+      summary: Health check
+      responses:
+        '200':
+          description: Service health status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: {type: string, example: healthy}
+                  service: {type: string}
+                  version: {type: string}
+                  environment: {type: string}
+  /ready:
+    get:
+      tags: [Health]
+      summary: Readiness check
+      responses:
+        '200':
+          description: Readiness checks for ffmpeg, storage, and stt
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ready: {type: boolean}
+                  checks: {type: object}
+  /api/v1/jobs/{job_id}:
+    get:
+      tags: [Jobs]
+      summary: Get background job status and progress
+      parameters:
+        - name: job_id
+          in: path
+          required: true
+          schema: {type: string}
+      responses:
+        '200':
+          description: Job status and links
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  job_id: {type: string}
+                  status: {type: string, enum: [queued, running, succeeded, failed]}
+                  progress: {type: integer, minimum: 0, maximum: 100}
+                  result_links: {type: object}
+                  error: {type: object}
+        '404':
+          description: Job not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/projects/upload:
+    post:
+      tags: [Projects]
+      summary: Upload video file for intake and transcription
+      parameters:
+        - name: Idempotency-Key
+          in: header
+          required: false
+          schema: {type: string}
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '201':
+          description: Project created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  project_id: {type: string}
+                  source_media: {type: object}
+                  timeline: {type: object}
+                  transcript_word_count: {type: integer}
+                  warnings: {type: array, items: {type: string}}
+  /api/v1/projects/{project_id}:
+    get:
+      tags: [Projects]
+      summary: Get project state and projected overlays
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema: {type: string}
+      responses:
+        '200':
+          description: Project details
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  project_id: {type: string}
+                  source_media: {type: object}
+                  timeline: {type: object}
+                  projected_overlays: {type: array}
+                  transcript: {type: object}
+                  pending_clarification: {type: object}
+  /api/v1/projects/{project_id}/instructions:
+    post:
+      tags: [Instructions]
+      summary: Apply natural language instruction to project timeline
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema: {type: string}
+        - name: Idempotency-Key
+          in: header
+          required: false
+          schema: {type: string}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [instruction]
+              properties:
+                instruction: {type: string}
+      responses:
+        '200':
+          description: 3-way instruction answer
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status, timeline_hash, duration_s]
+                properties:
+                  status:
+                    type: string
+                    enum: [applied, needs_clarification, rejected]
+                  operations:
+                    type: array
+                    items: {type: object}
+                  summary: {type: string}
+                  question: {type: [string, "null"]}
+                  options: {type: [array, "null"], items: {type: string}}
+                  timeline_hash: {type: string}
+                  duration_s: {type: number}
+                  time_policy_used: {type: string}
+                  warnings: {type: array, items: {type: string}}
+  /api/v1/projects/{project_id}/render:
+    post:
+      tags: [Rendering]
+      summary: Trigger asynchronous render job of current timeline
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema: {type: string}
+        - name: Idempotency-Key
+          in: header
+          required: false
+          schema: {type: string}
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                callback_url: {type: string}
+      responses:
+        '202':
+          description: Render job accepted and queued
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  job_id: {type: string}
+                  status: {type: string}
+                  progress: {type: integer}
+                  check_status_url: {type: string}
+  /api/v1/outputs/download/{filename}:
+    get:
+      tags: [Outputs]
+      summary: Download rendered media or JSON manifest
+      parameters:
+        - name: filename
+          in: path
+          required: true
+          schema: {type: string}
+      responses:
+        '200':
+          description: Binary file stream
+components:
+  schemas:
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: object
+          required: [code, message, retryable]
+          properties:
+            code: {type: string, example: PROJECT_NOT_FOUND}
+            message: {type: string}
+            retryable: {type: boolean}
+            details: {type: object}
