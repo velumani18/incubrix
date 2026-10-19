@@ -11,15 +11,60 @@ from app.engine.timeline import SourceMedia
 
 class IntakeService:
     def __init__(self):
-        # Find ffprobe executable
+        # Find ffprobe & ffmpeg executables
         self.ffprobe_path = shutil.which("ffprobe")
         if not self.ffprobe_path:
-            # Check winget path
             win_path = Path(r"C:\Users\Velumani\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.2-full_build\bin\ffprobe.exe")
-            if win_path.exists():
-                self.ffprobe_path = str(win_path)
-            else:
-                self.ffprobe_path = "ffprobe"
+            self.ffprobe_path = str(win_path) if win_path.exists() else "ffprobe"
+
+        self.ffmpeg_path = shutil.which("ffmpeg")
+        if not self.ffmpeg_path:
+            win_ffmpeg = Path(r"C:\Users\Velumani\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.2-full_build\bin\ffmpeg.exe")
+            self.ffmpeg_path = str(win_ffmpeg) if win_ffmpeg.exists() else "ffmpeg"
+
+    def extract_audio(self, video_path: Path, output_wav_path: Path | None = None) -> Path | None:
+        """
+        Extracts 16kHz mono WAV audio from uploaded video using FFmpeg.
+        Returns output WAV path or None if no audio stream exists.
+        """
+        if not video_path.exists():
+            raise IncuBrixException(
+                code=ErrorCodes.FILE_NOT_FOUND,
+                message=f"Video file not found: {video_path}",
+                retryable=False
+            )
+
+        # Check if video has audio stream
+        info = self.probe_media(video_path)
+        streams = info.get("streams", [])
+        has_audio = any(s.get("codec_type") == "audio" for s in streams)
+        if not has_audio:
+            logger.warning(f"Video {video_path.name} contains no audio stream to extract.")
+            return None
+
+        out_wav = output_wav_path or (settings.AUDIO_DIR / f"{video_path.stem}.wav")
+        out_wav.parent.mkdir(parents=True, exist_ok=True)
+
+        cmd = [
+            self.ffmpeg_path,
+            "-y",
+            "-i", str(video_path),
+            "-vn",
+            "-acodec", "pcm_s16le",
+            "-ar", "16000",
+            "-ac", "1",
+            str(out_wav)
+        ]
+        try:
+            res = subprocess.run(cmd, capture_output=True, text=True, check=True)
+            return out_wav
+        except Exception as e:
+            logger.error(f"FFmpeg audio extraction failed: {e}")
+            raise IncuBrixException(
+                code=ErrorCodes.INVALID_FILE_TYPE,
+                message=f"Failed to extract audio from video: {str(e)}",
+                retryable=False
+            )
 
     def probe_media(self, file_path: Path) -> dict[str, Any]:
         """Runs ffprobe on the target media file and parses streams."""

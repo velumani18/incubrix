@@ -50,6 +50,8 @@ export default function App() {
     }
   };
 
+  const [sttTask, setSttTask] = useState('transcribe'); // 'transcribe' or 'translate'
+
   const handleFileUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -66,9 +68,10 @@ export default function App() {
     }
 
     setLoading(true);
-    setUploadProgress('Uploading video and processing intake...');
+    setUploadProgress(`Uploading video & running ${sttTask}...`);
     const formData = new FormData();
     formData.append('file', file);
+    formData.append('task', sttTask);
 
     try {
       const res = await fetch('/api/v1/projects/upload', {
@@ -219,6 +222,23 @@ export default function App() {
               </span>
             </div>
           )}
+          <select
+            value={sttTask}
+            onChange={(e) => setSttTask(e.target.value)}
+            style={{
+              background: 'rgba(30, 41, 59, 0.8)',
+              color: '#fff',
+              border: '1px solid var(--border-subtle)',
+              borderRadius: '8px',
+              padding: '8px 10px',
+              fontSize: '0.8rem',
+              outline: 'none',
+              cursor: 'pointer'
+            }}
+          >
+            <option value="transcribe">Task: Transcribe Speech</option>
+            <option value="translate">Task: Translate to English</option>
+          </select>
           <label className="btn-secondary" style={{ cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
             <span>Upload Media</span>
             <input type="file" accept=".mp4,.mov,.mkv" onChange={handleFileUpload} style={{ display: 'none' }} />
@@ -369,9 +389,16 @@ export default function App() {
 
           {/* Interactive Word-Level Transcript Viewer */}
           <div style={{ flex: 1, padding: '20px 24px', overflowY: 'auto' }}>
-            <h3 style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-muted)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-              Interactive Word-Level Transcript ({project?.transcript?.words?.length || 0} tokens)
-            </h3>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+              <h3 style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                Interactive Word-Level Transcript ({project?.transcript?.words?.length || 0} tokens)
+              </h3>
+              {project?.transcript && (
+                <span style={{ fontSize: '0.75rem', color: '#a5b4fc', background: 'rgba(99, 102, 241, 0.15)', padding: '3px 8px', borderRadius: '4px' }}>
+                  Detected: <strong>{project.transcript.language_detected}</strong> → Output: <strong>{project.transcript.transcript_language}</strong> ({project.transcript.task})
+                </span>
+              )}
+            </div>
             <div style={{ lineHeight: '2.0', background: 'rgba(15, 23, 42, 0.3)', padding: '16px', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
               {project?.transcript?.words?.map((w) => {
                 const isFiller = ['um', 'uh', 'ah', 'erm'].includes(w.word.toLowerCase().replace(/[.,!]/g, ''));

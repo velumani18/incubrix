@@ -11,8 +11,142 @@ class Word(BaseModel):
     speaker: str = "speaker_0"
     confidence: float = 1.0
 
+    @property
+    def text(self) -> str:
+        return self.word
+
+class WordToken(BaseModel):
+    text: str
+    start: float
+    end: float
+    confidence: float = 1.0
+    id: str | None = None
+    speaker: str = "speaker_0"
+
+class TranscriptSegment(BaseModel):
+    id: str | None = None
+    start: float
+    end: float
+    text: str
+    speaker: str = "speaker_0"
+    words: list[WordToken] = Field(default_factory=list)
+    has_word_alignment: bool = True
+
 class Transcript(BaseModel):
+    project_id: str = ""
+    language_detected: str = "en"
+    transcript_language: str = "en"
+    task: str = "transcribe"  # "transcribe" or "translate"
+    segments: list[TranscriptSegment] = Field(default_factory=list)
     words: list[Word] = Field(default_factory=list)
+
+    def model_post_init(self, __context: Any) -> None:
+        self.sync_words_and_segments()
+
+    def sync_words_and_segments(self) -> None:
+        """Keeps segments and flat words array seamlessly synchronized."""
+        if self.segments and not self.words:
+            idx = 0
+            flat: list[Word] = []
+            for seg in self.segments:
+                if seg.words:
+                    for wt in seg.words:
+                        w_id = wt.id or f"w_{idx}_{int(wt.start*1000)}"
+                        flat.append(
+                            Word(
+                                id=w_id,
+                                word=wt.text,
+                                start_s=wt.start,
+                                end_s=wt.end,
+                                speaker=seg.speaker,
+                                confidence=wt.confidence,
+                            )
+                        )
+                        idx += 1
+                else:
+                    # Segment level fallback: treat segment as a single word token
+                    flat.append(
+                        Word(
+                            id=f"w_seg_{idx}",
+                            word=seg.text,
+                            start_s=seg.start,
+                            end_s=seg.end,
+                            speaker=seg.speaker,
+                            confidence=1.0,
+                        )
+                    )
+                    idx += 1
+            self.words = flat
+        elif self.words and not self.segments:
+            # Group words into sentence-like segments
+            curr_words: list[WordToken] = []
+            seg_start = self.words[0].start_s if self.words else 0.0
+            for w in self.words:
+                curr_words.append(
+                    WordToken(
+                        text=w.word,
+                        start=w.start_s,
+                        end=w.end_s,
+                        confidence=w.confidence,
+                        id=w.id,
+                        speaker=w.speaker,
+                    )
+                )
+                if w.word.endswith((".", "!", "?")) or len(curr_words) >= 12:
+                    text_str = " ".join(wt.text for wt in curr_words)
+                    self.segments.append(
+                        TranscriptSegment(
+                            id=f"seg_{len(self.segments)}",
+                            start=seg_start,
+                            end=curr_words[-1].end,
+                            text=text_str,
+                            speaker=curr_words[0].speaker,
+                            words=curr_words,
+                            has_word_alignment=True,
+                        )
+                    )
+                    curr_words = []
+                    seg_start = w.end_s
+            if curr_words:
+                text_str = " ".join(wt.text for wt in curr_words)
+                self.segments.append(
+                    TranscriptSegment(
+                        id=f"seg_{len(self.segments)}",
+                        start=seg_start,
+                        end=curr_words[-1].end,
+                        text=text_str,
+                        speaker=curr_words[0].speaker,
+                        words=curr_words,
+                        has_word_alignment=True,
+                    )
+                )
+
+    def to_schema_dict(self) -> dict[str, Any]:
+        """Serializes to the exact JSON schema requested by user."""
+        return {
+            "project_id": self.project_id,
+            "language_detected": self.language_detected,
+            "transcript_language": self.transcript_language,
+            "task": self.task,
+            "segments": [
+                {
+                    "start": round(s.start, 3),
+                    "end": round(s.end, 3),
+                    "text": s.text,
+                    "has_word_alignment": s.has_word_alignment,
+                    "words": [
+                        {
+                            "text": wt.text,
+                            "start": round(wt.start, 3),
+                            "end": round(wt.end, 3),
+                            "confidence": round(wt.confidence, 3),
+                        }
+                        for wt in s.words
+                    ]
+                }
+                for s in self.segments
+            ]
+        }
 
     def find_words_by_phrase(self, phrase: str) -> list[list[Word]]:
         """Finds all matching sequences of words for a given phrase (case-insensitive)."""

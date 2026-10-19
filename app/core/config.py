@@ -18,6 +18,7 @@ class Settings(BaseSettings):
     UPLOAD_DIR: Path = Path(__file__).resolve().parent.parent.parent / "data" / "uploads"
     PROJECTS_DIR: Path = Path(__file__).resolve().parent.parent.parent / "data" / "projects"
     OUTPUTS_DIR: Path = Path(__file__).resolve().parent.parent.parent / "data" / "outputs"
+    AUDIO_DIR: Path = Path(__file__).resolve().parent.parent.parent / "data" / "audio"
 
     # Time Policy: SOURCE_TIME or TIMELINE_TIME
     TIME_POLICY: str = "SOURCE_TIME"
@@ -48,6 +49,7 @@ class Settings(BaseSettings):
         self.UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
         self.PROJECTS_DIR.mkdir(parents=True, exist_ok=True)
         self.OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
+        self.AUDIO_DIR.mkdir(parents=True, exist_ok=True)
 
 settings = Settings()
 settings.ensure_directories()

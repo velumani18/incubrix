@@ -97,6 +97,73 @@ paths:
                   timeline: {type: object}
                   transcript_word_count: {type: integer}
                   warnings: {type: array, items: {type: string}}
+  /api/v1/projects/{project_id}/status:
+    get:
+      tags: [Projects]
+      summary: Get project processing status and progress
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema: {type: string}
+      responses:
+        '200':
+          description: Project status details
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  project_id: {type: string}
+                  status: {type: string}
+                  progress: {type: integer}
+                  error_message: {type: [string, "null"]}
+                  warnings: {type: array, items: {type: string}}
+                  has_audio: {type: boolean}
+                  duration_s: {type: number}
+                  transcript_url: {type: string}
+  /api/v1/projects/{project_id}/transcript:
+    get:
+      tags: [Projects]
+      summary: Get structured transcript with word-level timestamps
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema: {type: string}
+      responses:
+        '200':
+          description: Structured JSON transcript
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [project_id, language_detected, transcript_language, segments]
+                properties:
+                  project_id: {type: string}
+                  language_detected: {type: string}
+                  transcript_language: {type: string}
+                  task: {type: string}
+                  segments:
+                    type: array
+                    items:
+                      type: object
+                      required: [start, end, text, words]
+                      properties:
+                        start: {type: number}
+                        end: {type: number}
+                        text: {type: string}
+                        has_word_alignment: {type: boolean}
+                        words:
+                          type: array
+                          items:
+                            type: object
+                            required: [text, start, end]
+                            properties:
+                              text: {type: string}
+                              start: {type: number}
+                              end: {type: number}
+                              confidence: {type: number}
   /api/v1/projects/{project_id}:
     get:
       tags: [Projects]

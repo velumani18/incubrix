@@ -44,16 +44,26 @@ class Project:
 
         self.history = history or HistoryManager(self.timeline)
         self.pending_clarification: dict[str, Any] | None = None
+        self.extracted_audio_path: str | None = None
+        self.status: str = "ready"  # "uploading", "extracting_audio", "transcribing", "ready", "failed"
+        self.progress: int = 100
+        self.error_message: str | None = None
+        self.warnings: list[str] = []
 
     def to_dict(self) -> dict[str, Any]:
         return {
             "project_id": self.project_id,
             "source_media": self.source_media.model_dump(),
             "source_file_path": self.source_file_path,
+            "extracted_audio_path": self.extracted_audio_path,
             "transcript": self.transcript.model_dump(),
             "timeline": self.timeline.model_dump(),
             "pending_clarification": self.pending_clarification,
             "history_steps": [s.model_dump() for s in self.history.past_steps],
+            "status": self.status,
+            "progress": self.progress,
+            "error_message": self.error_message,
+            "warnings": self.warnings,
         }
 
     @classmethod
@@ -71,6 +81,11 @@ class Project:
             timeline=timeline,
         )
         proj.pending_clarification = data.get("pending_clarification")
+        proj.extracted_audio_path = data.get("extracted_audio_path")
+        proj.status = data.get("status", "ready")
+        proj.progress = data.get("progress", 100)
+        proj.error_message = data.get("error_message")
+        proj.warnings = data.get("warnings", [])
         return proj
 
 class ProjectManager:
