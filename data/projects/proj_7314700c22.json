@@ -1,0 +1,1599 @@
+{
+  "project_id": "proj_7314700c22",
+  "source_media": {
+    "filename": "f6a66afa79ca4e0d9b11edca1bf39666.mp4",
+    "sha256": "dec4ee81d86027a3286de2cc1750a2dce403001c5618863c5618b9c83c778199",
+    "duration_s": 23.708,
+    "width": 360,
+    "height": 640,
+    "fps": 30.0,
+    "has_audio": true,
+    "sample_rate": 44100
+  },
+  "source_file_path": "D:\\Incubrix_prompt_based_video_editor\\data\\uploads\\f6a66afa79ca4e0d9b11edca1bf39666.mp4",
+  "extracted_audio_path": "D:\\Incubrix_prompt_based_video_editor\\data\\audio\\f6a66afa79ca4e0d9b11edca1bf39666.wav",
+  "transcript": {
+    "project_id": "proj_7314700c22",
+    "language_detected": "en",
+    "transcript_language": "en",
+    "task": "transcribe",
+    "segments": [
+      {
+        "id": "seg_0",
+        "start": 0.0,
+        "end": 8.9,
+        "text": "You guys were competitive throughout the series, but the fact that these kind of tags are the best Indian side in the last 15 years.",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "You",
+            "start": 0.0,
+            "end": 0.64,
+            "confidence": 0.182,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "guys",
+            "start": 0.64,
+            "end": 1.56,
+            "confidence": 0.971,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "were",
+            "start": 1.56,
+            "end": 1.82,
+            "confidence": 0.948,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "competitive",
+            "start": 1.82,
+            "end": 2.42,
+            "confidence": 0.937,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "throughout",
+            "start": 2.42,
+            "end": 2.82,
+            "confidence": 0.99,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "the",
+            "start": 2.82,
+            "end": 3.0,
+            "confidence": 0.92,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "series,",
+            "start": 3.0,
+            "end": 3.22,
+            "confidence": 0.966,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "but",
+            "start": 3.22,
+            "end": 3.56,
+            "confidence": 0.961,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "the",
+            "start": 3.56,
+            "end": 4.38,
+            "confidence": 0.895,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "fact",
+            "start": 4.38,
+            "end": 4.6,
+            "confidence": 0.997,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "that",
+            "start": 4.6,
+            "end": 4.9,
+            "confidence": 0.963,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "these",
+            "start": 4.9,
+            "end": 5.42,
+            "confidence": 0.956,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "kind",
+            "start": 5.42,
+            "end": 5.8,
+            "confidence": 0.854,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "of",
+            "start": 5.8,
+            "end": 6.08,
+            "confidence": 0.998,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "tags",
+            "start": 6.08,
+            "end": 6.3,
+            "confidence": 0.985,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "are",
+            "start": 6.3,
+            "end": 6.52,
+            "confidence": 0.219,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "the",
+            "start": 6.52,
+            "end": 6.64,
+            "confidence": 0.985,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "best",
+            "start": 6.64,
+            "end": 7.04,
+            "confidence": 0.992,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "Indian",
+            "start": 7.04,
+            "end": 7.32,
+            "confidence": 0.572,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "side",
+            "start": 7.32,
+            "end": 7.68,
+            "confidence": 0.878,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "in",
+            "start": 7.68,
+            "end": 7.9,
+            "confidence": 0.981,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "the",
+            "start": 7.9,
+            "end": 8.02,
+            "confidence": 0.992,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "last",
+            "start": 8.02,
+            "end": 8.18,
+            "confidence": 0.979,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "15",
+            "start": 8.18,
+            "end": 8.6,
+            "confidence": 0.924,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "years.",
+            "start": 8.6,
+            "end": 8.9,
+            "confidence": 0.996,
+            "id": null,
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      },
+      {
+        "id": "seg_1",
+        "start": 9.08,
+        "end": 12.76,
+        "text": "Do these things put extra pressure on you or do you actually believe you are?",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "Do",
+            "start": 9.08,
+            "end": 9.34,
+            "confidence": 0.979,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "these",
+            "start": 9.34,
+            "end": 9.62,
+            "confidence": 0.965,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "things",
+            "start": 9.62,
+            "end": 9.82,
+            "confidence": 0.984,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "put",
+            "start": 9.82,
+            "end": 10.1,
+            "confidence": 0.957,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "extra",
+            "start": 10.1,
+            "end": 10.42,
+            "confidence": 0.983,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "pressure",
+            "start": 10.42,
+            "end": 10.74,
+            "confidence": 0.999,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "on",
+            "start": 10.74,
+            "end": 11.02,
+            "confidence": 0.997,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "you",
+            "start": 11.02,
+            "end": 11.12,
+            "confidence": 0.996,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "or",
+            "start": 11.12,
+            "end": 11.3,
+            "confidence": 0.699,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "do",
+            "start": 11.3,
+            "end": 11.44,
+            "confidence": 0.983,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "you",
+            "start": 11.44,
+            "end": 11.58,
+            "confidence": 0.974,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "actually",
+            "start": 11.58,
+            "end": 11.88,
+            "confidence": 0.982,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "believe",
+            "start": 11.88,
+            "end": 12.22,
+            "confidence": 0.996,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "you",
+            "start": 12.22,
+            "end": 12.52,
+            "confidence": 0.98,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "are?",
+            "start": 12.52,
+            "end": 12.76,
+            "confidence": 0.989,
+            "id": null,
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      },
+      {
+        "id": "seg_2",
+        "start": 13.62,
+        "end": 15.28,
+        "text": "We have to believe you're the best side by now.",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "We",
+            "start": 13.62,
+            "end": 13.9,
+            "confidence": 0.865,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "have",
+            "start": 13.9,
+            "end": 14.02,
+            "confidence": 0.993,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "to",
+            "start": 14.02,
+            "end": 14.16,
+            "confidence": 0.998,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "believe",
+            "start": 14.16,
+            "end": 14.36,
+            "confidence": 0.974,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "you're",
+            "start": 14.36,
+            "end": 14.48,
+            "confidence": 0.754,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "the",
+            "start": 14.48,
+            "end": 14.56,
+            "confidence": 0.994,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "best",
+            "start": 14.56,
+            "end": 14.8,
+            "confidence": 0.995,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "side",
+            "start": 14.8,
+            "end": 14.96,
+            "confidence": 0.883,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "by",
+            "start": 14.96,
+            "end": 15.12,
+            "confidence": 0.289,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "now.",
+            "start": 15.12,
+            "end": 15.28,
+            "confidence": 0.437,
+            "id": null,
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      },
+      {
+        "id": "seg_3",
+        "start": 15.52,
+        "end": 19.3,
+        "text": "But is this the best Indian side in the last 15 years? That's what you're going to say sometimes.",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "But",
+            "start": 15.52,
+            "end": 15.52,
+            "confidence": 0.282,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "is",
+            "start": 15.52,
+            "end": 15.7,
+            "confidence": 0.968,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "this",
+            "start": 15.7,
+            "end": 15.84,
+            "confidence": 0.945,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "the",
+            "start": 15.84,
+            "end": 16.06,
+            "confidence": 0.992,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "best",
+            "start": 16.06,
+            "end": 16.32,
+            "confidence": 0.994,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "Indian",
+            "start": 16.32,
+            "end": 16.56,
+            "confidence": 0.985,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "side",
+            "start": 16.56,
+            "end": 16.86,
+            "confidence": 0.987,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "in",
+            "start": 16.86,
+            "end": 17.02,
+            "confidence": 0.989,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "the",
+            "start": 17.02,
+            "end": 17.1,
+            "confidence": 0.997,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "last",
+            "start": 17.1,
+            "end": 17.24,
+            "confidence": 0.997,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "15",
+            "start": 17.24,
+            "end": 17.58,
+            "confidence": 0.994,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "years?",
+            "start": 17.58,
+            "end": 17.78,
+            "confidence": 0.996,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "That's",
+            "start": 17.96,
+            "end": 18.1,
+            "confidence": 0.928,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "what",
+            "start": 18.1,
+            "end": 18.2,
+            "confidence": 0.99,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "you're",
+            "start": 18.2,
+            "end": 18.56,
+            "confidence": 0.735,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "going",
+            "start": 18.56,
+            "end": 18.56,
+            "confidence": 0.235,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "to",
+            "start": 18.56,
+            "end": 18.62,
+            "confidence": 0.988,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "say",
+            "start": 18.62,
+            "end": 18.88,
+            "confidence": 0.971,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "sometimes.",
+            "start": 18.88,
+            "end": 19.3,
+            "confidence": 0.298,
+            "id": null,
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      },
+      {
+        "id": "seg_4",
+        "start": 19.46,
+        "end": 19.7,
+        "text": "What do you think?",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "What",
+            "start": 19.46,
+            "end": 19.46,
+            "confidence": 0.714,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "do",
+            "start": 19.46,
+            "end": 19.48,
+            "confidence": 0.981,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "you",
+            "start": 19.48,
+            "end": 19.56,
+            "confidence": 0.998,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "think?",
+            "start": 19.56,
+            "end": 19.7,
+            "confidence": 0.969,
+            "id": null,
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      },
+      {
+        "id": "seg_5",
+        "start": 20.24,
+        "end": 20.98,
+        "text": "I'm not sure.",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "I'm",
+            "start": 20.24,
+            "end": 20.6,
+            "confidence": 0.735,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "not",
+            "start": 20.6,
+            "end": 20.72,
+            "confidence": 0.999,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "sure.",
+            "start": 20.72,
+            "end": 20.98,
+            "confidence": 0.998,
+            "id": null,
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      },
+      {
+        "id": "seg_6",
+        "start": 21.34,
+        "end": 23.32,
+        "text": "You're not sure? That's your opinion. Thank you.",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "You're",
+            "start": 21.34,
+            "end": 21.5,
+            "confidence": 0.962,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "not",
+            "start": 21.5,
+            "end": 21.6,
+            "confidence": 0.999,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "sure?",
+            "start": 21.6,
+            "end": 21.84,
+            "confidence": 0.998,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "That's",
+            "start": 22.08,
+            "end": 22.5,
+            "confidence": 0.969,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "your",
+            "start": 22.5,
+            "end": 22.58,
+            "confidence": 0.916,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "opinion.",
+            "start": 22.58,
+            "end": 22.88,
+            "confidence": 0.999,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "Thank",
+            "start": 23.08,
+            "end": 23.2,
+            "confidence": 0.991,
+            "id": null,
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "you.",
+            "start": 23.2,
+            "end": 23.32,
+            "confidence": 0.987,
+            "id": null,
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      }
+    ],
+    "words": [
+      {
+        "id": "w_0_0",
+        "word": "You",
+        "start_s": 0.0,
+        "end_s": 0.64,
+        "speaker": "speaker_0",
+        "confidence": 0.182
+      },
+      {
+        "id": "w_1_640",
+        "word": "guys",
+        "start_s": 0.64,
+        "end_s": 1.56,
+        "speaker": "speaker_0",
+        "confidence": 0.971
+      },
+      {
+        "id": "w_2_1560",
+        "word": "were",
+        "start_s": 1.56,
+        "end_s": 1.82,
+        "speaker": "speaker_0",
+        "confidence": 0.948
+      },
+      {
+        "id": "w_3_1820",
+        "word": "competitive",
+        "start_s": 1.82,
+        "end_s": 2.42,
+        "speaker": "speaker_0",
+        "confidence": 0.937
+      },
+      {
+        "id": "w_4_2420",
+        "word": "throughout",
+        "start_s": 2.42,
+        "end_s": 2.82,
+        "speaker": "speaker_0",
+        "confidence": 0.99
+      },
+      {
+        "id": "w_5_2820",
+        "word": "the",
+        "start_s": 2.82,
+        "end_s": 3.0,
+        "speaker": "speaker_0",
+        "confidence": 0.92
+      },
+      {
+        "id": "w_6_3000",
+        "word": "series,",
+        "start_s": 3.0,
+        "end_s": 3.22,
+        "speaker": "speaker_0",
+        "confidence": 0.966
+      },
+      {
+        "id": "w_7_3220",
+        "word": "but",
+        "start_s": 3.22,
+        "end_s": 3.56,
+        "speaker": "speaker_0",
+        "confidence": 0.961
+      },
+      {
+        "id": "w_8_3560",
+        "word": "the",
+        "start_s": 3.56,
+        "end_s": 4.38,
+        "speaker": "speaker_0",
+        "confidence": 0.895
+      },
+      {
+        "id": "w_9_4380",
+        "word": "fact",
+        "start_s": 4.38,
+        "end_s": 4.6,
+        "speaker": "speaker_0",
+        "confidence": 0.997
+      },
+      {
+        "id": "w_10_4600",
+        "word": "that",
+        "start_s": 4.6,
+        "end_s": 4.9,
+        "speaker": "speaker_0",
+        "confidence": 0.963
+      },
+      {
+        "id": "w_11_4900",
+        "word": "these",
+        "start_s": 4.9,
+        "end_s": 5.42,
+        "speaker": "speaker_0",
+        "confidence": 0.956
+      },
+      {
+        "id": "w_12_5420",
+        "word": "kind",
+        "start_s": 5.42,
+        "end_s": 5.8,
+        "speaker": "speaker_0",
+        "confidence": 0.854
+      },
+      {
+        "id": "w_13_5800",
+        "word": "of",
+        "start_s": 5.8,
+        "end_s": 6.08,
+        "speaker": "speaker_0",
+        "confidence": 0.998
+      },
+      {
+        "id": "w_14_6080",
+        "word": "tags",
+        "start_s": 6.08,
+        "end_s": 6.3,
+        "speaker": "speaker_0",
+        "confidence": 0.985
+      },
+      {
+        "id": "w_15_6300",
+        "word": "are",
+        "start_s": 6.3,
+        "end_s": 6.52,
+        "speaker": "speaker_0",
+        "confidence": 0.219
+      },
+      {
+        "id": "w_16_6520",
+        "word": "the",
+        "start_s": 6.52,
+        "end_s": 6.64,
+        "speaker": "speaker_0",
+        "confidence": 0.985
+      },
+      {
+        "id": "w_17_6640",
+        "word": "best",
+        "start_s": 6.64,
+        "end_s": 7.04,
+        "speaker": "speaker_0",
+        "confidence": 0.992
+      },
+      {
+        "id": "w_18_7040",
+        "word": "Indian",
+        "start_s": 7.04,
+        "end_s": 7.32,
+        "speaker": "speaker_0",
+        "confidence": 0.572
+      },
+      {
+        "id": "w_19_7320",
+        "word": "side",
+        "start_s": 7.32,
+        "end_s": 7.68,
+        "speaker": "speaker_0",
+        "confidence": 0.878
+      },
+      {
+        "id": "w_20_7680",
+        "word": "in",
+        "start_s": 7.68,
+        "end_s": 7.9,
+        "speaker": "speaker_0",
+        "confidence": 0.981
+      },
+      {
+        "id": "w_21_7900",
+        "word": "the",
+        "start_s": 7.9,
+        "end_s": 8.02,
+        "speaker": "speaker_0",
+        "confidence": 0.992
+      },
+      {
+        "id": "w_22_8020",
+        "word": "last",
+        "start_s": 8.02,
+        "end_s": 8.18,
+        "speaker": "speaker_0",
+        "confidence": 0.979
+      },
+      {
+        "id": "w_23_8180",
+        "word": "15",
+        "start_s": 8.18,
+        "end_s": 8.6,
+        "speaker": "speaker_0",
+        "confidence": 0.924
+      },
+      {
+        "id": "w_24_8600",
+        "word": "years.",
+        "start_s": 8.6,
+        "end_s": 8.9,
+        "speaker": "speaker_0",
+        "confidence": 0.996
+      },
+      {
+        "id": "w_25_9080",
+        "word": "Do",
+        "start_s": 9.08,
+        "end_s": 9.34,
+        "speaker": "speaker_0",
+        "confidence": 0.979
+      },
+      {
+        "id": "w_26_9340",
+        "word": "these",
+        "start_s": 9.34,
+        "end_s": 9.62,
+        "speaker": "speaker_0",
+        "confidence": 0.965
+      },
+      {
+        "id": "w_27_9620",
+        "word": "things",
+        "start_s": 9.62,
+        "end_s": 9.82,
+        "speaker": "speaker_0",
+        "confidence": 0.984
+      },
+      {
+        "id": "w_28_9820",
+        "word": "put",
+        "start_s": 9.82,
+        "end_s": 10.1,
+        "speaker": "speaker_0",
+        "confidence": 0.957
+      },
+      {
+        "id": "w_29_10100",
+        "word": "extra",
+        "start_s": 10.1,
+        "end_s": 10.42,
+        "speaker": "speaker_0",
+        "confidence": 0.983
+      },
+      {
+        "id": "w_30_10420",
+        "word": "pressure",
+        "start_s": 10.42,
+        "end_s": 10.74,
+        "speaker": "speaker_0",
+        "confidence": 0.999
+      },
+      {
+        "id": "w_31_10740",
+        "word": "on",
+        "start_s": 10.74,
+        "end_s": 11.02,
+        "speaker": "speaker_0",
+        "confidence": 0.997
+      },
+      {
+        "id": "w_32_11020",
+        "word": "you",
+        "start_s": 11.02,
+        "end_s": 11.12,
+        "speaker": "speaker_0",
+        "confidence": 0.996
+      },
+      {
+        "id": "w_33_11120",
+        "word": "or",
+        "start_s": 11.12,
+        "end_s": 11.3,
+        "speaker": "speaker_0",
+        "confidence": 0.699
+      },
+      {
+        "id": "w_34_11300",
+        "word": "do",
+        "start_s": 11.3,
+        "end_s": 11.44,
+        "speaker": "speaker_0",
+        "confidence": 0.983
+      },
+      {
+        "id": "w_35_11440",
+        "word": "you",
+        "start_s": 11.44,
+        "end_s": 11.58,
+        "speaker": "speaker_0",
+        "confidence": 0.974
+      },
+      {
+        "id": "w_36_11580",
+        "word": "actually",
+        "start_s": 11.58,
+        "end_s": 11.88,
+        "speaker": "speaker_0",
+        "confidence": 0.982
+      },
+      {
+        "id": "w_37_11880",
+        "word": "believe",
+        "start_s": 11.88,
+        "end_s": 12.22,
+        "speaker": "speaker_0",
+        "confidence": 0.996
+      },
+      {
+        "id": "w_38_12220",
+        "word": "you",
+        "start_s": 12.22,
+        "end_s": 12.52,
+        "speaker": "speaker_0",
+        "confidence": 0.98
+      },
+      {
+        "id": "w_39_12520",
+        "word": "are?",
+        "start_s": 12.52,
+        "end_s": 12.76,
+        "speaker": "speaker_0",
+        "confidence": 0.989
+      },
+      {
+        "id": "w_40_13620",
+        "word": "We",
+        "start_s": 13.62,
+        "end_s": 13.9,
+        "speaker": "speaker_0",
+        "confidence": 0.865
+      },
+      {
+        "id": "w_41_13900",
+        "word": "have",
+        "start_s": 13.9,
+        "end_s": 14.02,
+        "speaker": "speaker_0",
+        "confidence": 0.993
+      },
+      {
+        "id": "w_42_14020",
+        "word": "to",
+        "start_s": 14.02,
+        "end_s": 14.16,
+        "speaker": "speaker_0",
+        "confidence": 0.998
+      },
+      {
+        "id": "w_43_14160",
+        "word": "believe",
+        "start_s": 14.16,
+        "end_s": 14.36,
+        "speaker": "speaker_0",
+        "confidence": 0.974
+      },
+      {
+        "id": "w_44_14360",
+        "word": "you're",
+        "start_s": 14.36,
+        "end_s": 14.48,
+        "speaker": "speaker_0",
+        "confidence": 0.754
+      },
+      {
+        "id": "w_45_14480",
+        "word": "the",
+        "start_s": 14.48,
+        "end_s": 14.56,
+        "speaker": "speaker_0",
+        "confidence": 0.994
+      },
+      {
+        "id": "w_46_14560",
+        "word": "best",
+        "start_s": 14.56,
+        "end_s": 14.8,
+        "speaker": "speaker_0",
+        "confidence": 0.995
+      },
+      {
+        "id": "w_47_14800",
+        "word": "side",
+        "start_s": 14.8,
+        "end_s": 14.96,
+        "speaker": "speaker_0",
+        "confidence": 0.883
+      },
+      {
+        "id": "w_48_14960",
+        "word": "by",
+        "start_s": 14.96,
+        "end_s": 15.12,
+        "speaker": "speaker_0",
+        "confidence": 0.289
+      },
+      {
+        "id": "w_49_15120",
+        "word": "now.",
+        "start_s": 15.12,
+        "end_s": 15.28,
+        "speaker": "speaker_0",
+        "confidence": 0.437
+      },
+      {
+        "id": "w_50_15520",
+        "word": "But",
+        "start_s": 15.52,
+        "end_s": 15.52,
+        "speaker": "speaker_0",
+        "confidence": 0.282
+      },
+      {
+        "id": "w_51_15520",
+        "word": "is",
+        "start_s": 15.52,
+        "end_s": 15.7,
+        "speaker": "speaker_0",
+        "confidence": 0.968
+      },
+      {
+        "id": "w_52_15700",
+        "word": "this",
+        "start_s": 15.7,
+        "end_s": 15.84,
+        "speaker": "speaker_0",
+        "confidence": 0.945
+      },
+      {
+        "id": "w_53_15840",
+        "word": "the",
+        "start_s": 15.84,
+        "end_s": 16.06,
+        "speaker": "speaker_0",
+        "confidence": 0.992
+      },
+      {
+        "id": "w_54_16059",
+        "word": "best",
+        "start_s": 16.06,
+        "end_s": 16.32,
+        "speaker": "speaker_0",
+        "confidence": 0.994
+      },
+      {
+        "id": "w_55_16320",
+        "word": "Indian",
+        "start_s": 16.32,
+        "end_s": 16.56,
+        "speaker": "speaker_0",
+        "confidence": 0.985
+      },
+      {
+        "id": "w_56_16560",
+        "word": "side",
+        "start_s": 16.56,
+        "end_s": 16.86,
+        "speaker": "speaker_0",
+        "confidence": 0.987
+      },
+      {
+        "id": "w_57_16860",
+        "word": "in",
+        "start_s": 16.86,
+        "end_s": 17.02,
+        "speaker": "speaker_0",
+        "confidence": 0.989
+      },
+      {
+        "id": "w_58_17020",
+        "word": "the",
+        "start_s": 17.02,
+        "end_s": 17.1,
+        "speaker": "speaker_0",
+        "confidence": 0.997
+      },
+      {
+        "id": "w_59_17100",
+        "word": "last",
+        "start_s": 17.1,
+        "end_s": 17.24,
+        "speaker": "speaker_0",
+        "confidence": 0.997
+      },
+      {
+        "id": "w_60_17240",
+        "word": "15",
+        "start_s": 17.24,
+        "end_s": 17.58,
+        "speaker": "speaker_0",
+        "confidence": 0.994
+      },
+      {
+        "id": "w_61_17580",
+        "word": "years?",
+        "start_s": 17.58,
+        "end_s": 17.78,
+        "speaker": "speaker_0",
+        "confidence": 0.996
+      },
+      {
+        "id": "w_62_17960",
+        "word": "That's",
+        "start_s": 17.96,
+        "end_s": 18.1,
+        "speaker": "speaker_0",
+        "confidence": 0.928
+      },
+      {
+        "id": "w_63_18100",
+        "word": "what",
+        "start_s": 18.1,
+        "end_s": 18.2,
+        "speaker": "speaker_0",
+        "confidence": 0.99
+      },
+      {
+        "id": "w_64_18200",
+        "word": "you're",
+        "start_s": 18.2,
+        "end_s": 18.56,
+        "speaker": "speaker_0",
+        "confidence": 0.735
+      },
+      {
+        "id": "w_65_18560",
+        "word": "going",
+        "start_s": 18.56,
+        "end_s": 18.56,
+        "speaker": "speaker_0",
+        "confidence": 0.235
+      },
+      {
+        "id": "w_66_18560",
+        "word": "to",
+        "start_s": 18.56,
+        "end_s": 18.62,
+        "speaker": "speaker_0",
+        "confidence": 0.988
+      },
+      {
+        "id": "w_67_18620",
+        "word": "say",
+        "start_s": 18.62,
+        "end_s": 18.88,
+        "speaker": "speaker_0",
+        "confidence": 0.971
+      },
+      {
+        "id": "w_68_18880",
+        "word": "sometimes.",
+        "start_s": 18.88,
+        "end_s": 19.3,
+        "speaker": "speaker_0",
+        "confidence": 0.298
+      },
+      {
+        "id": "w_69_19460",
+        "word": "What",
+        "start_s": 19.46,
+        "end_s": 19.46,
+        "speaker": "speaker_0",
+        "confidence": 0.714
+      },
+      {
+        "id": "w_70_19460",
+        "word": "do",
+        "start_s": 19.46,
+        "end_s": 19.48,
+        "speaker": "speaker_0",
+        "confidence": 0.981
+      },
+      {
+        "id": "w_71_19480",
+        "word": "you",
+        "start_s": 19.48,
+        "end_s": 19.56,
+        "speaker": "speaker_0",
+        "confidence": 0.998
+      },
+      {
+        "id": "w_72_19560",
+        "word": "think?",
+        "start_s": 19.56,
+        "end_s": 19.7,
+        "speaker": "speaker_0",
+        "confidence": 0.969
+      },
+      {
+        "id": "w_73_20240",
+        "word": "I'm",
+        "start_s": 20.24,
+        "end_s": 20.6,
+        "speaker": "speaker_0",
+        "confidence": 0.735
+      },
+      {
+        "id": "w_74_20600",
+        "word": "not",
+        "start_s": 20.6,
+        "end_s": 20.72,
+        "speaker": "speaker_0",
+        "confidence": 0.999
+      },
+      {
+        "id": "w_75_20720",
+        "word": "sure.",
+        "start_s": 20.72,
+        "end_s": 20.98,
+        "speaker": "speaker_0",
+        "confidence": 0.998
+      },
+      {
+        "id": "w_76_21340",
+        "word": "You're",
+        "start_s": 21.34,
+        "end_s": 21.5,
+        "speaker": "speaker_0",
+        "confidence": 0.962
+      },
+      {
+        "id": "w_77_21500",
+        "word": "not",
+        "start_s": 21.5,
+        "end_s": 21.6,
+        "speaker": "speaker_0",
+        "confidence": 0.999
+      },
+      {
+        "id": "w_78_21600",
+        "word": "sure?",
+        "start_s": 21.6,
+        "end_s": 21.84,
+        "speaker": "speaker_0",
+        "confidence": 0.998
+      },
+      {
+        "id": "w_79_22080",
+        "word": "That's",
+        "start_s": 22.08,
+        "end_s": 22.5,
+        "speaker": "speaker_0",
+        "confidence": 0.969
+      },
+      {
+        "id": "w_80_22500",
+        "word": "your",
+        "start_s": 22.5,
+        "end_s": 22.58,
+        "speaker": "speaker_0",
+        "confidence": 0.916
+      },
+      {
+        "id": "w_81_22580",
+        "word": "opinion.",
+        "start_s": 22.58,
+        "end_s": 22.88,
+        "speaker": "speaker_0",
+        "confidence": 0.999
+      },
+      {
+        "id": "w_82_23080",
+        "word": "Thank",
+        "start_s": 23.08,
+        "end_s": 23.2,
+        "speaker": "speaker_0",
+        "confidence": 0.991
+      },
+      {
+        "id": "w_83_23200",
+        "word": "you.",
+        "start_s": 23.2,
+        "end_s": 23.32,
+        "speaker": "speaker_0",
+        "confidence": 0.987
+      }
+    ]
+  },
+  "timeline": {
+    "schema_version": "1.0.0",
+    "timeline_id": "tl_105f4ecb",
+    "project_id": "proj_7314700c22",
+    "time_policy": "SOURCE_TIME",
+    "source_media": {
+      "filename": "f6a66afa79ca4e0d9b11edca1bf39666.mp4",
+      "sha256": "dec4ee81d86027a3286de2cc1750a2dce403001c5618863c5618b9c83c778199",
+      "duration_s": 23.708,
+      "width": 360,
+      "height": 640,
+      "fps": 30.0,
+      "has_audio": true,
+      "sample_rate": 44100
+    },
+    "segments": [
+      {
+        "segment_id": "seg_ec82a7d1",
+        "source_start": 0.0,
+        "source_end": 22.08,
+        "speed": 1.0,
+        "is_muted": false,
+        "volume": 1.0,
+        "speaker": null
+      },
+      {
+        "segment_id": "seg_f967a7a1",
+        "source_start": 22.88,
+        "source_end": 23.708,
+        "speed": 1.0,
+        "is_muted": false,
+        "volume": 1.0,
+        "speaker": null
+      }
+    ],
+    "overlays": [],
+    "audio_effects": [],
+    "audio_tracks": [],
+    "duration_s": 22.908,
+    "timeline_hash": "b8b8af526e17eb546f6112311a4ff756d10fad4a34c1ee810ba7ab5b3c986bab"
+  },
+  "pending_clarification": null,
+  "history_steps": [
+    {
+      "step_index": 0,
+      "version": 0,
+      "instruction": "__initial__",
+      "operations": [],
+      "summary": "Initial untouched media intake",
+      "timeline_snapshot": {
+        "schema_version": "1.0.0",
+        "timeline_id": "tl_105f4ecb",
+        "project_id": "proj_7314700c22",
+        "time_policy": "SOURCE_TIME",
+        "source_media": {
+          "filename": "f6a66afa79ca4e0d9b11edca1bf39666.mp4",
+          "sha256": "dec4ee81d86027a3286de2cc1750a2dce403001c5618863c5618b9c83c778199",
+          "duration_s": 23.708,
+          "width": 360,
+          "height": 640,
+          "fps": 30.0,
+          "has_audio": true,
+          "sample_rate": 44100
+        },
+        "segments": [
+          {
+            "segment_id": "seg_0",
+            "source_start": 0.0,
+            "source_end": 23.708,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          }
+        ],
+        "overlays": [],
+        "audio_effects": [],
+        "audio_tracks": [],
+        "duration_s": 23.708,
+        "timeline_hash": "3f2eb3741b317c32b376f3aad06ab3a04163d25aafd8caadef925fe1a6f5d2c2"
+      },
+      "timeline_hash": "3f2eb3741b317c32b376f3aad06ab3a04163d25aafd8caadef925fe1a6f5d2c2",
+      "duration_s": 23.708,
+      "timestamp": 1792494779.765723
+    },
+    {
+      "step_index": 1,
+      "version": 1,
+      "instruction": "AI: remove That's your opinion",
+      "operations": [
+        {
+          "operation": "cut_range",
+          "cut_source_start": 22.08,
+          "cut_source_end": 22.88,
+          "time_policy_used": "SOURCE_TIME",
+          "affected": true,
+          "new_duration_s": 22.908
+        }
+      ],
+      "summary": "AI Assistant applied 1 operation(s)",
+      "timeline_snapshot": {
+        "schema_version": "1.0.0",
+        "timeline_id": "tl_105f4ecb",
+        "project_id": "proj_7314700c22",
+        "time_policy": "SOURCE_TIME",
+        "source_media": {
+          "filename": "f6a66afa79ca4e0d9b11edca1bf39666.mp4",
+          "sha256": "dec4ee81d86027a3286de2cc1750a2dce403001c5618863c5618b9c83c778199",
+          "duration_s": 23.708,
+          "width": 360,
+          "height": 640,
+          "fps": 30.0,
+          "has_audio": true,
+          "sample_rate": 44100
+        },
+        "segments": [
+          {
+            "segment_id": "seg_ec82a7d1",
+            "source_start": 0.0,
+            "source_end": 22.08,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          },
+          {
+            "segment_id": "seg_f967a7a1",
+            "source_start": 22.88,
+            "source_end": 23.708,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          }
+        ],
+        "overlays": [],
+        "audio_effects": [],
+        "audio_tracks": [],
+        "duration_s": 22.908,
+        "timeline_hash": "b8b8af526e17eb546f6112311a4ff756d10fad4a34c1ee810ba7ab5b3c986bab"
+      },
+      "timeline_hash": "b8b8af526e17eb546f6112311a4ff756d10fad4a34c1ee810ba7ab5b3c986bab",
+      "duration_s": 22.908,
+      "timestamp": 1792494880.378827
+    }
+  ],
+  "redo_steps": [],
+  "status": "ready",
+  "progress": 100,
+  "error_message": null,
+  "warnings": [
+    "Low confidence word ' You' (0.18) at 0.00s",
+    "Low confidence word ' are' (0.22) at 6.30s",
+    "Low confidence word ' Indian' (0.57) at 7.04s",
+    "Low confidence word ' by' (0.29) at 14.96s",
+    "Low confidence word ' now.' (0.44) at 15.12s",
+    "Low confidence word ' But' (0.28) at 15.52s",
+    "Low confidence word ' going' (0.23) at 18.56s",
+    "Low confidence word ' sometimes.' (0.30) at 18.88s"
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "project_id": "proj_hist_dfbf8729",
+  "source_media": {
+    "filename": "hist_clip_6s.mp4",
+    "sha256": "33b274afd9563196114e2eccd2468a808b552756c5e56700c8e07ff3a6447357",
+    "duration_s": 6.0,
+    "width": 320,
+    "height": 240,
+    "fps": 30.0,
+    "has_audio": true,
+    "sample_rate": 44100
+  },
+  "source_file_path": "C:\\Users\\Velumani\\AppData\\Local\\Temp\\pytest-of-Velumani\\pytest-76\\hist_media0\\hist_clip_6s.mp4",
+  "extracted_audio_path": null,
+  "transcript": {
+    "project_id": "proj_hist_dfbf8729",
+    "language_detected": "en",
+    "transcript_language": "en",
+    "task": "transcribe",
+    "segments": [
+      {
+        "id": "seg_0",
+        "start": 0.2,
+        "end": 5.8,
+        "text": "Start first second third end",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "Start",
+            "start": 0.2,
+            "end": 0.8,
+            "confidence": 1.0,
+            "id": "w_0",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "first",
+            "start": 1.2,
+            "end": 1.8,
+            "confidence": 1.0,
+            "id": "w_1",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "second",
+            "start": 2.2,
+            "end": 2.8,
+            "confidence": 1.0,
+            "id": "w_2",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "third",
+            "start": 3.2,
+            "end": 3.8,
+            "confidence": 1.0,
+            "id": "w_3",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "end",
+            "start": 5.0,
+            "end": 5.8,
+            "confidence": 1.0,
+            "id": "w_4",
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      }
+    ],
+    "words": [
+      {
+        "id": "w_0",
+        "word": "Start",
+        "start_s": 0.2,
+        "end_s": 0.8,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w_1",
+        "word": "first",
+        "start_s": 1.2,
+        "end_s": 1.8,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w_2",
+        "word": "second",
+        "start_s": 2.2,
+        "end_s": 2.8,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w_3",
+        "word": "third",
+        "start_s": 3.2,
+        "end_s": 3.8,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w_4",
+        "word": "end",
+        "start_s": 5.0,
+        "end_s": 5.8,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "timeline": {
+    "schema_version": "1.0.0",
+    "timeline_id": "tl_proj_hist_dfbf8729",
+    "project_id": "proj_hist_dfbf8729",
+    "time_policy": "SOURCE_TIME",
+    "source_media": {
+      "filename": "hist_clip_6s.mp4",
+      "sha256": "33b274afd9563196114e2eccd2468a808b552756c5e56700c8e07ff3a6447357",
+      "duration_s": 6.0,
+      "width": 320,
+      "height": 240,
+      "fps": 30.0,
+      "has_audio": true,
+      "sample_rate": 44100
+    },
+    "segments": [
+      {
+        "segment_id": "seg_0",
+        "source_start": 0.0,
+        "source_end": 6.0,
+        "speed": 1.0,
+        "is_muted": false,
+        "volume": 1.0,
+        "speaker": null
+      }
+    ],
+    "overlays": [],
+    "audio_effects": [],
+    "audio_tracks": [],
+    "duration_s": 6.0,
+    "timeline_hash": "1f47c5df3141b933bb5a909654db46d87a638c9d3c6cf37337c37258da6b75fd"
+  },
+  "pending_clarification": null,
+  "history_steps": [
+    {
+      "step_index": 0,
+      "version": 0,
+      "instruction": "__initial__",
+      "operations": [],
+      "summary": "Initial untouched media intake",
+      "timeline_snapshot": {
+        "schema_version": "1.0.0",
+        "timeline_id": "tl_proj_hist_dfbf8729",
+        "project_id": "proj_hist_dfbf8729",
+        "time_policy": "SOURCE_TIME",
+        "source_media": {
+          "filename": "hist_clip_6s.mp4",
+          "sha256": "33b274afd9563196114e2eccd2468a808b552756c5e56700c8e07ff3a6447357",
+          "duration_s": 6.0,
+          "width": 320,
+          "height": 240,
+          "fps": 30.0,
+          "has_audio": true,
+          "sample_rate": 44100
+        },
+        "segments": [
+          {
+            "segment_id": "seg_0",
+            "source_start": 0.0,
+            "source_end": 6.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          }
+        ],
+        "overlays": [],
+        "audio_effects": [],
+        "audio_tracks": [],
+        "duration_s": 6.0,
+        "timeline_hash": "1f47c5df3141b933bb5a909654db46d87a638c9d3c6cf37337c37258da6b75fd"
+      },
+      "timeline_hash": "1f47c5df3141b933bb5a909654db46d87a638c9d3c6cf37337c37258da6b75fd",
+      "duration_s": 6.0,
+      "timestamp": 1792495478.6556413
+    }
+  ],
+  "redo_steps": [],
+  "status": "ready",
+  "progress": 100,
+  "error_message": null,
+  "warnings": []
+}

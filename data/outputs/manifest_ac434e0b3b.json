@@ -1,0 +1,38 @@
+{
+  "manifest_version": "1.0.0",
+  "render_id": "ac434e0b3b",
+  "project_id": "proj_020be5063e",
+  "source_sha256": "6af9539ccde7a8e4633d4342af1ff0e9f8c1220df5626b5de4abb2ad29efdbae",
+  "rendered_sha256": "599b04d6c480d0fe1506e7175081f9ddfc3f4d01607cb7868fae565a5ca8a0c2",
+  "timeline_hash": "326320fa7b876dc5d7c3b98aded1a917e1a66dd4fd972c9ca3b1510884c5b3cc",
+  "target_duration_s": 3.0,
+  "models_and_providers": {
+    "transcription": {
+      "provider": "faster-whisper",
+      "version": "1.2.1",
+      "model": "base"
+    },
+    "parser": {
+      "provider": "deterministic-regex-intent-engine",
+      "version": "1.0.0"
+    },
+    "media_engine": {
+      "provider": "ffmpeg",
+      "version": "9.0.2"
+    }
+  },
+  "timings_s": {
+    "render_wall_clock": 0.2
+  },
+  "cost_estimate_usd": {
+    "stt_cost_per_min": 0.006,
+    "total_stt_cost": 0.0003,
+    "render_compute_cost": 1e-05
+  },
+  "warnings": [],
+  "rights_and_licensing": {
+    "commercial_usable": true,
+    "ai_generated_labels": "Transcription and layout parsed via AI assistant; video is original user media.",
+    "license": "Proprietary IncuBrix Evaluation Prototype"
+  }
+}

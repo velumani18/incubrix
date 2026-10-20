@@ -1,0 +1,108 @@
+{
+  "project_id": "proj_b4e0d8d853",
+  "source_media": {
+    "filename": "6e48eac8099449f9912d3675a162b88a.mp4",
+    "sha256": "6af9539ccde7a8e4633d4342af1ff0e9f8c1220df5626b5de4abb2ad29efdbae",
+    "duration_s": 3.0,
+    "width": 320,
+    "height": 240,
+    "fps": 25.0,
+    "has_audio": false,
+    "sample_rate": 44100
+  },
+  "source_file_path": "D:\\Incubrix_prompt_based_video_editor\\data\\uploads\\6e48eac8099449f9912d3675a162b88a.mp4",
+  "extracted_audio_path": null,
+  "transcript": {
+    "project_id": "proj_b4e0d8d853",
+    "language_detected": "none",
+    "transcript_language": "en",
+    "task": "transcribe",
+    "segments": [],
+    "words": []
+  },
+  "timeline": {
+    "schema_version": "1.0.0",
+    "timeline_id": "tl_4a94afba",
+    "project_id": "proj_b4e0d8d853",
+    "time_policy": "SOURCE_TIME",
+    "source_media": {
+      "filename": "6e48eac8099449f9912d3675a162b88a.mp4",
+      "sha256": "6af9539ccde7a8e4633d4342af1ff0e9f8c1220df5626b5de4abb2ad29efdbae",
+      "duration_s": 3.0,
+      "width": 320,
+      "height": 240,
+      "fps": 25.0,
+      "has_audio": false,
+      "sample_rate": 44100
+    },
+    "segments": [
+      {
+        "segment_id": "seg_0",
+        "source_start": 0.0,
+        "source_end": 3.0,
+        "speed": 1.0,
+        "is_muted": false,
+        "volume": 1.0,
+        "speaker": null
+      }
+    ],
+    "overlays": [],
+    "audio_effects": [],
+    "audio_tracks": [],
+    "duration_s": 3.0,
+    "timeline_hash": "326320fa7b876dc5d7c3b98aded1a917e1a66dd4fd972c9ca3b1510884c5b3cc"
+  },
+  "pending_clarification": null,
+  "history_steps": [
+    {
+      "step_index": 0,
+      "version": 0,
+      "instruction": "__initial__",
+      "operations": [],
+      "summary": "Initial untouched media intake",
+      "timeline_snapshot": {
+        "schema_version": "1.0.0",
+        "timeline_id": "tl_4a94afba",
+        "project_id": "proj_b4e0d8d853",
+        "time_policy": "SOURCE_TIME",
+        "source_media": {
+          "filename": "6e48eac8099449f9912d3675a162b88a.mp4",
+          "sha256": "6af9539ccde7a8e4633d4342af1ff0e9f8c1220df5626b5de4abb2ad29efdbae",
+          "duration_s": 3.0,
+          "width": 320,
+          "height": 240,
+          "fps": 25.0,
+          "has_audio": false,
+          "sample_rate": 44100
+        },
+        "segments": [
+          {
+            "segment_id": "seg_0",
+            "source_start": 0.0,
+            "source_end": 3.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          }
+        ],
+        "overlays": [],
+        "audio_effects": [],
+        "audio_tracks": [],
+        "duration_s": 3.0,
+        "timeline_hash": "326320fa7b876dc5d7c3b98aded1a917e1a66dd4fd972c9ca3b1510884c5b3cc"
+      },
+      "timeline_hash": "326320fa7b876dc5d7c3b98aded1a917e1a66dd4fd972c9ca3b1510884c5b3cc",
+      "duration_s": 3.0,
+      "timestamp": 1792423894.3764975
+    }
+  ],
+  "redo_steps": [],
+  "status": "ready",
+  "progress": 100,
+  "error_message": null,
+  "warnings": [
+    "Video contains no audio stream. Speech transcription and audio ducking will be bypassed.",
+    "Video has no audio stream; speech transcription bypassed."
+  ]
+}

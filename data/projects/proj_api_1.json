@@ -1,0 +1,167 @@
+{
+  "project_id": "proj_api_1",
+  "source_media": {
+    "filename": "api_test.mp4",
+    "sha256": "abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890",
+    "duration_s": 120.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "has_audio": true,
+    "sample_rate": 44100
+  },
+  "source_file_path": "sample.mp4",
+  "extracted_audio_path": null,
+  "transcript": {
+    "project_id": "",
+    "language_detected": "en",
+    "transcript_language": "en",
+    "task": "transcribe",
+    "segments": [
+      {
+        "id": "seg_0",
+        "start": 10.0,
+        "end": 81.0,
+        "text": "welcome pricing pricing",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "welcome",
+            "start": 10.0,
+            "end": 11.0,
+            "confidence": 1.0,
+            "id": "w_1",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "pricing",
+            "start": 40.0,
+            "end": 41.0,
+            "confidence": 1.0,
+            "id": "w_2",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "pricing",
+            "start": 80.0,
+            "end": 81.0,
+            "confidence": 1.0,
+            "id": "w_3",
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      }
+    ],
+    "words": [
+      {
+        "id": "w_1",
+        "word": "welcome",
+        "start_s": 10.0,
+        "end_s": 11.0,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w_2",
+        "word": "pricing",
+        "start_s": 40.0,
+        "end_s": 41.0,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w_3",
+        "word": "pricing",
+        "start_s": 80.0,
+        "end_s": 81.0,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "timeline": {
+    "schema_version": "1.0.0",
+    "timeline_id": "tl_api_test",
+    "project_id": "proj_api_1",
+    "time_policy": "SOURCE_TIME",
+    "source_media": {
+      "filename": "api_test.mp4",
+      "sha256": "abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890",
+      "duration_s": 120.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30.0,
+      "has_audio": true,
+      "sample_rate": 44100
+    },
+    "segments": [
+      {
+        "segment_id": "seg_0",
+        "source_start": 0.0,
+        "source_end": 120.0,
+        "speed": 1.0,
+        "is_muted": false,
+        "volume": 1.0,
+        "speaker": null,
+        "timeline_duration": 120.0
+      }
+    ],
+    "overlays": [],
+    "audio_effects": [],
+    "audio_tracks": [],
+    "duration_s": 120.0,
+    "timeline_hash": "28db3a1a1d24794c12565abba4efec2deee9b9ef8d7791c8140ecff45a589ee0"
+  },
+  "pending_clarification": null,
+  "history_steps": [
+    {
+      "step_index": 0,
+      "version": 0,
+      "instruction": "__initial__",
+      "operations": [],
+      "summary": "Initial untouched media intake",
+      "timeline_snapshot": {
+        "schema_version": "1.0.0",
+        "timeline_id": "tl_api_test",
+        "project_id": "proj_api_1",
+        "time_policy": "SOURCE_TIME",
+        "source_media": {
+          "filename": "api_test.mp4",
+          "sha256": "abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890",
+          "duration_s": 120.0,
+          "width": 1920,
+          "height": 1080,
+          "fps": 30.0,
+          "has_audio": true,
+          "sample_rate": 44100
+        },
+        "segments": [
+          {
+            "segment_id": "seg_0",
+            "source_start": 0.0,
+            "source_end": 120.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null,
+            "timeline_duration": 120.0
+          }
+        ],
+        "overlays": [],
+        "audio_effects": [],
+        "audio_tracks": [],
+        "duration_s": 120.0,
+        "timeline_hash": "28db3a1a1d24794c12565abba4efec2deee9b9ef8d7791c8140ecff45a589ee0"
+      },
+      "timeline_hash": "28db3a1a1d24794c12565abba4efec2deee9b9ef8d7791c8140ecff45a589ee0",
+      "duration_s": 120.0,
+      "timestamp": 1792496031.3970282
+    }
+  ],
+  "redo_steps": [],
+  "status": "ready",
+  "progress": 100,
+  "error_message": null,
+  "warnings": []
+}

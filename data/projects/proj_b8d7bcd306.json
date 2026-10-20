@@ -1,0 +1,107 @@
+{
+  "project_id": "proj_b8d7bcd306",
+  "source_media": {
+    "filename": "55c0bf77631d4eb2947ef51460acc284.mp4",
+    "sha256": "1c72990700fbc520c7cb38adade30d3944c891997ae402c5e2350e9fe0cef3e0",
+    "duration_s": 5.0,
+    "width": 640,
+    "height": 360,
+    "fps": 30.0,
+    "has_audio": true,
+    "sample_rate": 44100
+  },
+  "source_file_path": "D:\\Incubrix_prompt_based_video_editor\\data\\uploads\\55c0bf77631d4eb2947ef51460acc284.mp4",
+  "extracted_audio_path": "D:\\Incubrix_prompt_based_video_editor\\data\\audio\\55c0bf77631d4eb2947ef51460acc284.wav",
+  "transcript": {
+    "project_id": "proj_b8d7bcd306",
+    "language_detected": "es",
+    "transcript_language": "en",
+    "task": "translate",
+    "segments": [],
+    "words": []
+  },
+  "timeline": {
+    "schema_version": "1.0.0",
+    "timeline_id": "tl_e2ded617",
+    "project_id": "proj_b8d7bcd306",
+    "time_policy": "SOURCE_TIME",
+    "source_media": {
+      "filename": "55c0bf77631d4eb2947ef51460acc284.mp4",
+      "sha256": "1c72990700fbc520c7cb38adade30d3944c891997ae402c5e2350e9fe0cef3e0",
+      "duration_s": 5.0,
+      "width": 640,
+      "height": 360,
+      "fps": 30.0,
+      "has_audio": true,
+      "sample_rate": 44100
+    },
+    "segments": [
+      {
+        "segment_id": "seg_0",
+        "source_start": 0.0,
+        "source_end": 5.0,
+        "speed": 1.0,
+        "is_muted": false,
+        "volume": 1.0,
+        "speaker": null
+      }
+    ],
+    "overlays": [],
+    "audio_effects": [],
+    "audio_tracks": [],
+    "duration_s": 5.0,
+    "timeline_hash": "146bf3ccadd9392a3e6939a2deee47f1b857b98d98a7cefe67f256afb5dc007c"
+  },
+  "pending_clarification": null,
+  "history_steps": [
+    {
+      "step_index": 0,
+      "version": 0,
+      "instruction": "__initial__",
+      "operations": [],
+      "summary": "Initial untouched media intake",
+      "timeline_snapshot": {
+        "schema_version": "1.0.0",
+        "timeline_id": "tl_e2ded617",
+        "project_id": "proj_b8d7bcd306",
+        "time_policy": "SOURCE_TIME",
+        "source_media": {
+          "filename": "55c0bf77631d4eb2947ef51460acc284.mp4",
+          "sha256": "1c72990700fbc520c7cb38adade30d3944c891997ae402c5e2350e9fe0cef3e0",
+          "duration_s": 5.0,
+          "width": 640,
+          "height": 360,
+          "fps": 30.0,
+          "has_audio": true,
+          "sample_rate": 44100
+        },
+        "segments": [
+          {
+            "segment_id": "seg_0",
+            "source_start": 0.0,
+            "source_end": 5.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          }
+        ],
+        "overlays": [],
+        "audio_effects": [],
+        "audio_tracks": [],
+        "duration_s": 5.0,
+        "timeline_hash": "146bf3ccadd9392a3e6939a2deee47f1b857b98d98a7cefe67f256afb5dc007c"
+      },
+      "timeline_hash": "146bf3ccadd9392a3e6939a2deee47f1b857b98d98a7cefe67f256afb5dc007c",
+      "duration_s": 5.0,
+      "timestamp": 1792423679.787749
+    }
+  ],
+  "redo_steps": [],
+  "status": "ready",
+  "progress": 100,
+  "error_message": null,
+  "warnings": [
+    "No speech detected in audio stream."
+  ]
+}

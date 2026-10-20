@@ -1,7 +1,7 @@
 import json
 import hashlib
 from typing import Any
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, computed_field
 
 class Word(BaseModel):
     id: str
@@ -174,6 +174,7 @@ class Segment(BaseModel):
     volume: float = 1.0
     speaker: str | None = None
 
+    @computed_field
     @property
     def timeline_duration(self) -> float:
         return (self.source_end - self.source_start) / max(self.speed, 0.01)

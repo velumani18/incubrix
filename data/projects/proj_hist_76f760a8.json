@@ -1,0 +1,470 @@
+{
+  "project_id": "proj_hist_76f760a8",
+  "source_media": {
+    "filename": "hist_clip_6s.mp4",
+    "sha256": "33b274afd9563196114e2eccd2468a808b552756c5e56700c8e07ff3a6447357",
+    "duration_s": 6.0,
+    "width": 320,
+    "height": 240,
+    "fps": 30.0,
+    "has_audio": true,
+    "sample_rate": 44100
+  },
+  "source_file_path": "C:\\Users\\Velumani\\AppData\\Local\\Temp\\pytest-of-Velumani\\pytest-55\\hist_media0\\hist_clip_6s.mp4",
+  "extracted_audio_path": null,
+  "transcript": {
+    "project_id": "proj_hist_76f760a8",
+    "language_detected": "en",
+    "transcript_language": "en",
+    "task": "transcribe",
+    "segments": [
+      {
+        "id": "seg_0",
+        "start": 0.2,
+        "end": 5.8,
+        "text": "Start first second third end",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "Start",
+            "start": 0.2,
+            "end": 0.8,
+            "confidence": 1.0,
+            "id": "w_0",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "first",
+            "start": 1.2,
+            "end": 1.8,
+            "confidence": 1.0,
+            "id": "w_1",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "second",
+            "start": 2.2,
+            "end": 2.8,
+            "confidence": 1.0,
+            "id": "w_2",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "third",
+            "start": 3.2,
+            "end": 3.8,
+            "confidence": 1.0,
+            "id": "w_3",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "end",
+            "start": 5.0,
+            "end": 5.8,
+            "confidence": 1.0,
+            "id": "w_4",
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      }
+    ],
+    "words": [
+      {
+        "id": "w_0",
+        "word": "Start",
+        "start_s": 0.2,
+        "end_s": 0.8,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w_1",
+        "word": "first",
+        "start_s": 1.2,
+        "end_s": 1.8,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w_2",
+        "word": "second",
+        "start_s": 2.2,
+        "end_s": 2.8,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w_3",
+        "word": "third",
+        "start_s": 3.2,
+        "end_s": 3.8,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w_4",
+        "word": "end",
+        "start_s": 5.0,
+        "end_s": 5.8,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "timeline": {
+    "schema_version": "1.0.0",
+    "timeline_id": "tl_proj_hist_76f760a8",
+    "project_id": "proj_hist_76f760a8",
+    "time_policy": "SOURCE_TIME",
+    "source_media": {
+      "filename": "hist_clip_6s.mp4",
+      "sha256": "33b274afd9563196114e2eccd2468a808b552756c5e56700c8e07ff3a6447357",
+      "duration_s": 6.0,
+      "width": 320,
+      "height": 240,
+      "fps": 30.0,
+      "has_audio": true,
+      "sample_rate": 44100
+    },
+    "segments": [
+      {
+        "segment_id": "seg_d5eb1218",
+        "source_start": 0.0,
+        "source_end": 1.0,
+        "speed": 1.0,
+        "is_muted": false,
+        "volume": 1.0,
+        "speaker": null
+      },
+      {
+        "segment_id": "seg_e413892f",
+        "source_start": 2.0,
+        "source_end": 6.0,
+        "speed": 1.0,
+        "is_muted": false,
+        "volume": 1.0,
+        "speaker": null
+      }
+    ],
+    "overlays": [],
+    "audio_effects": [],
+    "audio_tracks": [],
+    "duration_s": 5.0,
+    "timeline_hash": "108860f718ced3c78f58db405473af6a180b012383f5ef562065848b05caba8b"
+  },
+  "pending_clarification": null,
+  "history_steps": [
+    {
+      "step_index": 0,
+      "version": 0,
+      "instruction": "__initial__",
+      "operations": [],
+      "summary": "Initial untouched media intake",
+      "timeline_snapshot": {
+        "schema_version": "1.0.0",
+        "timeline_id": "tl_proj_hist_76f760a8",
+        "project_id": "proj_hist_76f760a8",
+        "time_policy": "SOURCE_TIME",
+        "source_media": {
+          "filename": "hist_clip_6s.mp4",
+          "sha256": "33b274afd9563196114e2eccd2468a808b552756c5e56700c8e07ff3a6447357",
+          "duration_s": 6.0,
+          "width": 320,
+          "height": 240,
+          "fps": 30.0,
+          "has_audio": true,
+          "sample_rate": 44100
+        },
+        "segments": [
+          {
+            "segment_id": "seg_0",
+            "source_start": 0.0,
+            "source_end": 6.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          }
+        ],
+        "overlays": [],
+        "audio_effects": [],
+        "audio_tracks": [],
+        "duration_s": 6.0,
+        "timeline_hash": "1f47c5df3141b933bb5a909654db46d87a638c9d3c6cf37337c37258da6b75fd"
+      },
+      "timeline_hash": "1f47c5df3141b933bb5a909654db46d87a638c9d3c6cf37337c37258da6b75fd",
+      "duration_s": 6.0,
+      "timestamp": 1792417762.6264527
+    },
+    {
+      "step_index": 1,
+      "version": 1,
+      "instruction": "Applied 1 structured edit(s)",
+      "operations": [
+        {
+          "operation": "cut_range",
+          "cut_source_start": 1.0,
+          "cut_source_end": 2.0,
+          "time_policy_used": "SOURCE_TIME",
+          "affected": true,
+          "new_duration_s": 5.0
+        }
+      ],
+      "summary": "Deterministic edits applied: 1 operation(s)",
+      "timeline_snapshot": {
+        "schema_version": "1.0.0",
+        "timeline_id": "tl_proj_hist_76f760a8",
+        "project_id": "proj_hist_76f760a8",
+        "time_policy": "SOURCE_TIME",
+        "source_media": {
+          "filename": "hist_clip_6s.mp4",
+          "sha256": "33b274afd9563196114e2eccd2468a808b552756c5e56700c8e07ff3a6447357",
+          "duration_s": 6.0,
+          "width": 320,
+          "height": 240,
+          "fps": 30.0,
+          "has_audio": true,
+          "sample_rate": 44100
+        },
+        "segments": [
+          {
+            "segment_id": "seg_d5eb1218",
+            "source_start": 0.0,
+            "source_end": 1.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          },
+          {
+            "segment_id": "seg_e413892f",
+            "source_start": 2.0,
+            "source_end": 6.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          }
+        ],
+        "overlays": [],
+        "audio_effects": [],
+        "audio_tracks": [],
+        "duration_s": 5.0,
+        "timeline_hash": "108860f718ced3c78f58db405473af6a180b012383f5ef562065848b05caba8b"
+      },
+      "timeline_hash": "108860f718ced3c78f58db405473af6a180b012383f5ef562065848b05caba8b",
+      "duration_s": 5.0,
+      "timestamp": 1792417762.631202
+    },
+    {
+      "step_index": 2,
+      "version": 2,
+      "instruction": "Applied 1 structured edit(s)",
+      "operations": [
+        {
+          "operation": "cut_range",
+          "cut_source_start": 2.5,
+          "cut_source_end": 3.5,
+          "time_policy_used": "SOURCE_TIME",
+          "affected": true,
+          "new_duration_s": 4.0
+        }
+      ],
+      "summary": "Deterministic edits applied: 1 operation(s)",
+      "timeline_snapshot": {
+        "schema_version": "1.0.0",
+        "timeline_id": "tl_proj_hist_76f760a8",
+        "project_id": "proj_hist_76f760a8",
+        "time_policy": "SOURCE_TIME",
+        "source_media": {
+          "filename": "hist_clip_6s.mp4",
+          "sha256": "33b274afd9563196114e2eccd2468a808b552756c5e56700c8e07ff3a6447357",
+          "duration_s": 6.0,
+          "width": 320,
+          "height": 240,
+          "fps": 30.0,
+          "has_audio": true,
+          "sample_rate": 44100
+        },
+        "segments": [
+          {
+            "segment_id": "seg_d5eb1218",
+            "source_start": 0.0,
+            "source_end": 1.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          },
+          {
+            "segment_id": "seg_1e6f50e5",
+            "source_start": 2.0,
+            "source_end": 2.5,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          },
+          {
+            "segment_id": "seg_c936d801",
+            "source_start": 3.5,
+            "source_end": 6.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          }
+        ],
+        "overlays": [],
+        "audio_effects": [],
+        "audio_tracks": [],
+        "duration_s": 4.0,
+        "timeline_hash": "3e2f5a7d569b6ab509b4093b5e33c60798bc0323b9e5cb1791ac5eb3240b7946"
+      },
+      "timeline_hash": "3e2f5a7d569b6ab509b4093b5e33c60798bc0323b9e5cb1791ac5eb3240b7946",
+      "duration_s": 4.0,
+      "timestamp": 1792417762.6364095
+    },
+    {
+      "step_index": 3,
+      "version": 3,
+      "instruction": "Applied 1 structured edit(s)",
+      "operations": [
+        {
+          "operation": "cut_range",
+          "cut_source_start": 4.0,
+          "cut_source_end": 5.0,
+          "time_policy_used": "SOURCE_TIME",
+          "affected": true,
+          "new_duration_s": 3.0
+        }
+      ],
+      "summary": "Deterministic edits applied: 1 operation(s)",
+      "timeline_snapshot": {
+        "schema_version": "1.0.0",
+        "timeline_id": "tl_proj_hist_76f760a8",
+        "project_id": "proj_hist_76f760a8",
+        "time_policy": "SOURCE_TIME",
+        "source_media": {
+          "filename": "hist_clip_6s.mp4",
+          "sha256": "33b274afd9563196114e2eccd2468a808b552756c5e56700c8e07ff3a6447357",
+          "duration_s": 6.0,
+          "width": 320,
+          "height": 240,
+          "fps": 30.0,
+          "has_audio": true,
+          "sample_rate": 44100
+        },
+        "segments": [
+          {
+            "segment_id": "seg_d5eb1218",
+            "source_start": 0.0,
+            "source_end": 1.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          },
+          {
+            "segment_id": "seg_1e6f50e5",
+            "source_start": 2.0,
+            "source_end": 2.5,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          },
+          {
+            "segment_id": "seg_2ecd5d28",
+            "source_start": 3.5,
+            "source_end": 4.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          },
+          {
+            "segment_id": "seg_78523198",
+            "source_start": 5.0,
+            "source_end": 6.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          }
+        ],
+        "overlays": [],
+        "audio_effects": [],
+        "audio_tracks": [],
+        "duration_s": 3.0,
+        "timeline_hash": "f16eef7cb69672e03e300353ea6cd1b98789f889f0a2d9015ddd749a8236abd2"
+      },
+      "timeline_hash": "f16eef7cb69672e03e300353ea6cd1b98789f889f0a2d9015ddd749a8236abd2",
+      "duration_s": 3.0,
+      "timestamp": 1792417762.6424687
+    },
+    {
+      "step_index": 4,
+      "version": 4,
+      "instruction": "Restore to version 1",
+      "operations": [
+        {
+          "operation": "restore_version",
+          "target_version": 1,
+          "original_instruction": "Applied 1 structured edit(s)"
+        }
+      ],
+      "summary": "Restored project timeline to state from version 1 ('Applied 1 structured edit(s)')",
+      "timeline_snapshot": {
+        "schema_version": "1.0.0",
+        "timeline_id": "tl_proj_hist_76f760a8",
+        "project_id": "proj_hist_76f760a8",
+        "time_policy": "SOURCE_TIME",
+        "source_media": {
+          "filename": "hist_clip_6s.mp4",
+          "sha256": "33b274afd9563196114e2eccd2468a808b552756c5e56700c8e07ff3a6447357",
+          "duration_s": 6.0,
+          "width": 320,
+          "height": 240,
+          "fps": 30.0,
+          "has_audio": true,
+          "sample_rate": 44100
+        },
+        "segments": [
+          {
+            "segment_id": "seg_d5eb1218",
+            "source_start": 0.0,
+            "source_end": 1.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          },
+          {
+            "segment_id": "seg_e413892f",
+            "source_start": 2.0,
+            "source_end": 6.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          }
+        ],
+        "overlays": [],
+        "audio_effects": [],
+        "audio_tracks": [],
+        "duration_s": 5.0,
+        "timeline_hash": "108860f718ced3c78f58db405473af6a180b012383f5ef562065848b05caba8b"
+      },
+      "timeline_hash": "108860f718ced3c78f58db405473af6a180b012383f5ef562065848b05caba8b",
+      "duration_s": 5.0,
+      "timestamp": 1792417762.6526546
+    }
+  ],
+  "redo_steps": [],
+  "status": "ready",
+  "progress": 100,
+  "error_message": null,
+  "warnings": []
+}

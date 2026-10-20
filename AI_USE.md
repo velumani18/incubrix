@@ -15,5 +15,9 @@ As required by IncuBrix Engineering Assessment 2, this document discloses all AI
 - **Speech-to-Text Transcription**:
   - `faster-whisper-base`: Used for word-level speech transcription with timestamp alignments and confidence scoring.
   - `MockTranscriptionAdapter`: Deterministic mock adapter for instant local execution and CI test suite execution with no API keys.
-- **Intent Recognition Engine**:
-  - High-performance, deterministic regex and semantic intent classification pipeline with ambiguity detection and clarification option generation.
+- **Intent Recognition & LLM Editing Assistant**:
+  - Configurable LLM engine (`LLM_PROVIDER`: `mock`, `openai`, `gemini`) powering the Natural-Language Editing Assistant.
+  - Generates strict, validated JSON edit proposals conforming to defined schemas (`cut`, `mute`, `caption`, `speed`).
+  - Resolves transcript phrase references directly to actual source timestamps; rejects hallucinated phrases or out-of-bounds timestamps.
+  - Enforces human-in-the-loop preview and user confirmation before executing any edits on the deterministic editing engine.
+  - Records every accepted edit into project history for non-destructive undo and redo.

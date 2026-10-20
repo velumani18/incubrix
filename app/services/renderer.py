@@ -46,6 +46,7 @@ class RenderService:
 
         # 2. Build FFmpeg command
         # Build segment filter chain
+        has_audio = timeline.source_media.has_audio
         filter_complex_parts = []
         seg_video_labels = []
         seg_audio_labels = []
@@ -61,18 +62,32 @@ class RenderService:
             filter_complex_parts.append(
                 f"[0:v]trim=start={seg.source_start}:end={seg.source_end},setpts=PTS-STARTPTS,setpts={speed_v}*PTS[{v_label}]"
             )
-            # Audio trim & speed
-            filter_complex_parts.append(
-                f"[0:a]atrim=start={seg.source_start}:end={seg.source_end},asetpts=PTS-STARTPTS,atempo={speed_a}[{a_label}]"
-            )
+            # Audio trim & speed & volume/mute
+            if has_audio:
+                if seg.is_muted:
+                    vol_filter = ",volume=0"
+                elif seg.volume != 1.0:
+                    vol_filter = f",volume={seg.volume}"
+                else:
+                    vol_filter = ""
+                filter_complex_parts.append(
+                    f"[0:a]atrim=start={seg.source_start}:end={seg.source_end},asetpts=PTS-STARTPTS,atempo={speed_a}{vol_filter}[{a_label}]"
+                )
+                seg_audio_labels.append(f"[{a_label}]")
+
             seg_video_labels.append(f"[{v_label}]")
-            seg_audio_labels.append(f"[{a_label}]")
 
         n_segs = len(timeline.segments)
-        all_labels = "".join(f"{v}{a}" for v, a in zip(seg_video_labels, seg_audio_labels))
-        filter_complex_parts.append(
-            f"{all_labels}concat=n={n_segs}:v=1:a=1[vconcat][aconcat]"
-        )
+        if has_audio:
+            all_labels = "".join(f"{v}{a}" for v, a in zip(seg_video_labels, seg_audio_labels))
+            filter_complex_parts.append(
+                f"{all_labels}concat=n={n_segs}:v=1:a=1[vconcat][aconcat]"
+            )
+        else:
+            all_v_labels = "".join(seg_video_labels)
+            filter_complex_parts.append(
+                f"{all_v_labels}concat=n={n_segs}:v=1:a=0[vconcat]"
+            )
 
         curr_v = "[vconcat]"
         # 3. Apply Overlays (drawtext)
@@ -93,7 +108,7 @@ class RenderService:
 
         # Final labels
         final_v = curr_v
-        final_a = "[aconcat]"
+        final_a = "[aconcat]" if has_audio else None
 
         filter_str = ";".join(filter_complex_parts)
 
@@ -103,15 +118,17 @@ class RenderService:
             "-i", str(source_media_path),
             "-filter_complex", filter_str,
             "-map", final_v,
-            "-map", final_a,
+        ]
+        if has_audio:
+            cmd.extend(["-map", final_a, "-c:a", "aac", "-b:a", "192k"])
+
+        cmd.extend([
             "-c:v", "libx264",
             "-preset", "veryfast",
             "-crf", "22",
-            "-c:a", "aac",
-            "-b:a", "192k",
             "-movflags", "+faststart",
             str(output_video_path)
-        ]
+        ])
 
         logger.info(f"Executing render pipeline: {output_video_path.name}")
         proc = subprocess.run(cmd, capture_output=True, text=True)
@@ -126,9 +143,10 @@ class RenderService:
                 "-t", str(timeline.duration_s),
                 "-c:v", "libx264",
                 "-preset", "ultrafast",
-                "-c:a", "aac",
-                str(output_video_path)
             ]
+            if has_audio:
+                fallback_cmd.extend(["-c:a", "aac"])
+            fallback_cmd.append(str(output_video_path))
             fallback_proc = subprocess.run(fallback_cmd, capture_output=True, text=True)
             if fallback_proc.returncode != 0:
                 raise IncuBrixException(

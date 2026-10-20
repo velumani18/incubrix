@@ -1,0 +1,515 @@
+{
+  "project_id": "test_live_0703ce",
+  "source_media": {
+    "filename": "test.mp4",
+    "sha256": "abc1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+    "duration_s": 30.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "has_audio": true,
+    "sample_rate": 44100
+  },
+  "source_file_path": "test.mp4",
+  "extracted_audio_path": null,
+  "transcript": {
+    "project_id": "test_live_0703ce",
+    "language_detected": "en",
+    "transcript_language": "en",
+    "task": "transcribe",
+    "segments": [
+      {
+        "id": "seg_0",
+        "start": 0.5,
+        "end": 1.8,
+        "text": "Welcome to the video.",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "Welcome",
+            "start": 0.5,
+            "end": 1.0,
+            "confidence": 1.0,
+            "id": "w1",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "to",
+            "start": 1.0,
+            "end": 1.2,
+            "confidence": 1.0,
+            "id": "w2",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "the",
+            "start": 1.2,
+            "end": 1.4,
+            "confidence": 1.0,
+            "id": "w3",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "video.",
+            "start": 1.4,
+            "end": 1.8,
+            "confidence": 1.0,
+            "id": "w4",
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      },
+      {
+        "id": "seg_1",
+        "start": 1.8,
+        "end": 4.5,
+        "text": "In this introduction we will discuss pricing.",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "In",
+            "start": 1.8,
+            "end": 2.0,
+            "confidence": 1.0,
+            "id": "w5",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "this",
+            "start": 2.0,
+            "end": 2.2,
+            "confidence": 1.0,
+            "id": "w6",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "introduction",
+            "start": 2.2,
+            "end": 2.8,
+            "confidence": 1.0,
+            "id": "w7",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "we",
+            "start": 2.8,
+            "end": 3.0,
+            "confidence": 1.0,
+            "id": "w8",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "will",
+            "start": 3.0,
+            "end": 3.2,
+            "confidence": 1.0,
+            "id": "w9",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "discuss",
+            "start": 3.2,
+            "end": 3.7,
+            "confidence": 1.0,
+            "id": "w10",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "pricing.",
+            "start": 3.7,
+            "end": 4.5,
+            "confidence": 1.0,
+            "id": "w11",
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      },
+      {
+        "id": "seg_2",
+        "start": 4.5,
+        "end": 8.5,
+        "text": "Next up is the product demo.",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "Next",
+            "start": 6.5,
+            "end": 6.8,
+            "confidence": 1.0,
+            "id": "w12",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "up",
+            "start": 6.8,
+            "end": 7.0,
+            "confidence": 1.0,
+            "id": "w13",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "is",
+            "start": 7.0,
+            "end": 7.2,
+            "confidence": 1.0,
+            "id": "w14",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "the",
+            "start": 7.2,
+            "end": 7.4,
+            "confidence": 1.0,
+            "id": "w15",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "product",
+            "start": 7.4,
+            "end": 7.9,
+            "confidence": 1.0,
+            "id": "w16",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "demo.",
+            "start": 7.9,
+            "end": 8.5,
+            "confidence": 1.0,
+            "id": "w17",
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      },
+      {
+        "id": "seg_3",
+        "start": 8.5,
+        "end": 14.5,
+        "text": "Here is the second pricing breakdown.",
+        "speaker": "speaker_0",
+        "words": [
+          {
+            "text": "Here",
+            "start": 12.0,
+            "end": 12.3,
+            "confidence": 1.0,
+            "id": "w18",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "is",
+            "start": 12.3,
+            "end": 12.5,
+            "confidence": 1.0,
+            "id": "w19",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "the",
+            "start": 12.5,
+            "end": 12.7,
+            "confidence": 1.0,
+            "id": "w20",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "second",
+            "start": 12.7,
+            "end": 13.1,
+            "confidence": 1.0,
+            "id": "w21",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "pricing",
+            "start": 13.1,
+            "end": 13.6,
+            "confidence": 1.0,
+            "id": "w22",
+            "speaker": "speaker_0"
+          },
+          {
+            "text": "breakdown.",
+            "start": 13.6,
+            "end": 14.5,
+            "confidence": 1.0,
+            "id": "w23",
+            "speaker": "speaker_0"
+          }
+        ],
+        "has_word_alignment": true
+      }
+    ],
+    "words": [
+      {
+        "id": "w1",
+        "word": "Welcome",
+        "start_s": 0.5,
+        "end_s": 1.0,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w2",
+        "word": "to",
+        "start_s": 1.0,
+        "end_s": 1.2,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w3",
+        "word": "the",
+        "start_s": 1.2,
+        "end_s": 1.4,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w4",
+        "word": "video.",
+        "start_s": 1.4,
+        "end_s": 1.8,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w5",
+        "word": "In",
+        "start_s": 1.8,
+        "end_s": 2.0,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w6",
+        "word": "this",
+        "start_s": 2.0,
+        "end_s": 2.2,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w7",
+        "word": "introduction",
+        "start_s": 2.2,
+        "end_s": 2.8,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w8",
+        "word": "we",
+        "start_s": 2.8,
+        "end_s": 3.0,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w9",
+        "word": "will",
+        "start_s": 3.0,
+        "end_s": 3.2,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w10",
+        "word": "discuss",
+        "start_s": 3.2,
+        "end_s": 3.7,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w11",
+        "word": "pricing.",
+        "start_s": 3.7,
+        "end_s": 4.5,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w12",
+        "word": "Next",
+        "start_s": 6.5,
+        "end_s": 6.8,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w13",
+        "word": "up",
+        "start_s": 6.8,
+        "end_s": 7.0,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w14",
+        "word": "is",
+        "start_s": 7.0,
+        "end_s": 7.2,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w15",
+        "word": "the",
+        "start_s": 7.2,
+        "end_s": 7.4,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w16",
+        "word": "product",
+        "start_s": 7.4,
+        "end_s": 7.9,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w17",
+        "word": "demo.",
+        "start_s": 7.9,
+        "end_s": 8.5,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w18",
+        "word": "Here",
+        "start_s": 12.0,
+        "end_s": 12.3,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w19",
+        "word": "is",
+        "start_s": 12.3,
+        "end_s": 12.5,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w20",
+        "word": "the",
+        "start_s": 12.5,
+        "end_s": 12.7,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w21",
+        "word": "second",
+        "start_s": 12.7,
+        "end_s": 13.1,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w22",
+        "word": "pricing",
+        "start_s": 13.1,
+        "end_s": 13.6,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      },
+      {
+        "id": "w23",
+        "word": "breakdown.",
+        "start_s": 13.6,
+        "end_s": 14.5,
+        "speaker": "speaker_0",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "timeline": {
+    "schema_version": "1.0.0",
+    "timeline_id": "tl_e77b48d8",
+    "project_id": "test_live_0703ce",
+    "time_policy": "SOURCE_TIME",
+    "source_media": {
+      "filename": "test.mp4",
+      "sha256": "abc1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "duration_s": 30.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 30.0,
+      "has_audio": true,
+      "sample_rate": 44100
+    },
+    "segments": [
+      {
+        "segment_id": "seg_0",
+        "source_start": 0.0,
+        "source_end": 30.0,
+        "speed": 1.0,
+        "is_muted": false,
+        "volume": 1.0,
+        "speaker": null
+      }
+    ],
+    "overlays": [],
+    "audio_effects": [],
+    "audio_tracks": [],
+    "duration_s": 30.0,
+    "timeline_hash": "89619213bacf141884dff9111ad9c5cece205f9dbc50ce0e1bba3863525d068b"
+  },
+  "pending_clarification": null,
+  "history_steps": [
+    {
+      "step_index": 0,
+      "version": 0,
+      "instruction": "__initial__",
+      "operations": [],
+      "summary": "Initial untouched media intake",
+      "timeline_snapshot": {
+        "schema_version": "1.0.0",
+        "timeline_id": "tl_e77b48d8",
+        "project_id": "test_live_0703ce",
+        "time_policy": "SOURCE_TIME",
+        "source_media": {
+          "filename": "test.mp4",
+          "sha256": "abc1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+          "duration_s": 30.0,
+          "width": 1280,
+          "height": 720,
+          "fps": 30.0,
+          "has_audio": true,
+          "sample_rate": 44100
+        },
+        "segments": [
+          {
+            "segment_id": "seg_0",
+            "source_start": 0.0,
+            "source_end": 30.0,
+            "speed": 1.0,
+            "is_muted": false,
+            "volume": 1.0,
+            "speaker": null
+          }
+        ],
+        "overlays": [],
+        "audio_effects": [],
+        "audio_tracks": [],
+        "duration_s": 30.0,
+        "timeline_hash": "89619213bacf141884dff9111ad9c5cece205f9dbc50ce0e1bba3863525d068b"
+      },
+      "timeline_hash": "89619213bacf141884dff9111ad9c5cece205f9dbc50ce0e1bba3863525d068b",
+      "duration_s": 30.0,
+      "timestamp": 1792418852.1213164
+    }
+  ],
+  "redo_steps": [],
+  "status": "ready",
+  "progress": 100,
+  "error_message": null,
+  "warnings": []
+}

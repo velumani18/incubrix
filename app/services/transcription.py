@@ -193,8 +193,22 @@ class FasterWhisperAdapter(TranscriptionAdapter):
         warnings: list[str] = []
 
         try:
+            # Load audio: if WAV, load directly with wave/numpy to bypass PyAV 19 metadata_errors bug
+            audio_input: Any = str(audio_path)
+            try:
+                import wave
+                import numpy as np
+                with wave.open(str(audio_path), 'rb') as wf:
+                    framerate = wf.getframerate()
+                    frames = wf.readframes(wf.getnframes())
+                    sampwidth = wf.getsampwidth()
+                    if sampwidth == 2:
+                        audio_input = np.frombuffer(frames, dtype=np.int16).astype(np.float32) / 32768.0
+            except Exception as load_err:
+                logger.debug(f"Direct wave load bypassed ({load_err}), using path string: {audio_path}")
+
             segments_gen, info = self.model.transcribe(
-                str(audio_path),
+                audio_input,
                 task=task,
                 language=language,
                 word_timestamps=True,

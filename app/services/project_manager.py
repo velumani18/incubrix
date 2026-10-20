@@ -60,6 +60,7 @@ class Project:
             "timeline": self.timeline.model_dump(),
             "pending_clarification": self.pending_clarification,
             "history_steps": [s.model_dump() for s in self.history.past_steps],
+            "redo_steps": [s.model_dump() for s in self.history.redo_steps],
             "status": self.status,
             "progress": self.progress,
             "error_message": self.error_message,
@@ -68,10 +69,22 @@ class Project:
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> "Project":
+        from app.engine.history import HistoryStep, HistoryManager
         src_media = SourceMedia.model_validate(data["source_media"])
         transcript = Transcript.model_validate(data["transcript"])
         timeline = Timeline.model_validate(data["timeline"])
         timeline.recompute()
+
+        history_steps = [HistoryStep.model_validate(s) for s in data.get("history_steps", [])]
+        redo_steps = [HistoryStep.model_validate(s) for s in data.get("redo_steps", [])]
+        if history_steps:
+            history = HistoryManager(
+                initial_timeline=None,
+                past_steps=history_steps,
+                redo_steps=redo_steps,
+            )
+        else:
+            history = HistoryManager(timeline)
         
         proj = cls(
             project_id=data["project_id"],
@@ -79,6 +92,7 @@ class Project:
             source_file_path=data["source_file_path"],
             transcript=transcript,
             timeline=timeline,
+            history=history,
         )
         proj.pending_clarification = data.get("pending_clarification")
         proj.extracted_audio_path = data.get("extracted_audio_path")

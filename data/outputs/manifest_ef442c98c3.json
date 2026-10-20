@@ -1,0 +1,38 @@
+{
+  "manifest_version": "1.0.0",
+  "render_id": "ef442c98c3",
+  "project_id": "proj_test_edits_clip_6s",
+  "source_sha256": "33b274afd9563196114e2eccd2468a808b552756c5e56700c8e07ff3a6447357",
+  "rendered_sha256": "ff8fe7c041c8a936a9e6c82b6943efc79dadca0b60926f48777cf67033dadaab",
+  "timeline_hash": "4a0d76f861646194ef1712840b5f6ac972758cfc30024b924bb95c6ce59de280",
+  "target_duration_s": 4.0,
+  "models_and_providers": {
+    "transcription": {
+      "provider": "mock",
+      "version": "1.2.1",
+      "model": "base"
+    },
+    "parser": {
+      "provider": "deterministic-regex-intent-engine",
+      "version": "1.0.0"
+    },
+    "media_engine": {
+      "provider": "ffmpeg",
+      "version": "9.0.2"
+    }
+  },
+  "timings_s": {
+    "render_wall_clock": 0.39
+  },
+  "cost_estimate_usd": {
+    "stt_cost_per_min": 0.0,
+    "total_stt_cost": 0.0,
+    "render_compute_cost": 2e-05
+  },
+  "warnings": [],
+  "rights_and_licensing": {
+    "commercial_usable": true,
+    "ai_generated_labels": "Transcription and layout parsed via AI assistant; video is original user media.",
+    "license": "Proprietary IncuBrix Evaluation Prototype"
+  }
+}

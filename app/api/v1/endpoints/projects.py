@@ -261,6 +261,10 @@ def get_project(project_id: str):
         "transcript": proj.transcript.to_schema_dict(),
         "pending_clarification": proj.pending_clarification,
         "warnings": proj.warnings,
+        "can_undo": proj.history.can_undo,
+        "can_redo": proj.history.can_redo,
+        "current_version": proj.history.current_version,
+        "versions_count": len(proj.history.past_steps),
     }
 
 @router.get("/{project_id}/timeline")

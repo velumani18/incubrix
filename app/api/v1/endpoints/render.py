@@ -11,19 +11,46 @@ router = APIRouter(prefix="/projects", tags=["Rendering"])
 
 class RenderRequest(BaseModel):
     callback_url: str | None = None
+    sync: bool | None = False
 
 @router.post("/{project_id}/render", status_code=status.HTTP_202_ACCEPTED)
 def start_render_job(
     project_id: str,
     req: RenderRequest | None = None,
+    sync: bool = False,
     idempotency_key: str | None = Header(None, alias="Idempotency-Key"),
 ):
     """
     Integration Standard Point 3 & 4:
-    Renders timeline as an asynchronous background job.
+    Renders timeline as an asynchronous background job or synchronously if sync=True.
     Returns 202 Accepted with job_id. Supports safe retries via Idempotency-Key.
     """
     proj = project_manager.get_project(project_id)
+    is_sync = sync or (req and req.sync)
+
+    if is_sync:
+        src_path = Path(proj.source_file_path)
+        out_video, manifest = renderer.render_timeline(
+            timeline=proj.timeline,
+            transcript=proj.transcript,
+            source_media_path=src_path
+        )
+        return {
+            "status": "succeeded",
+            "progress": 100,
+            "rendered_video_path": str(out_video),
+            "result_links": {
+                "video_url": f"/api/v1/outputs/download/{out_video.name}",
+                "manifest_url": f"/api/v1/outputs/download/manifest_{manifest['render_id']}.json",
+                "rendered_sha256": manifest["rendered_sha256"],
+                "timeline_hash": manifest["timeline_hash"],
+            },
+            "video_url": f"/api/v1/outputs/download/{out_video.name}",
+            "manifest_url": f"/api/v1/outputs/download/manifest_{manifest['render_id']}.json",
+            "rendered_sha256": manifest["rendered_sha256"],
+            "timeline_hash": manifest["timeline_hash"],
+            "duration_s": manifest.get("target_duration_s", proj.timeline.duration_s)
+        }
 
     # Check safe retry / idempotency
     if idempotency_key:

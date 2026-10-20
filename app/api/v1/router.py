@@ -5,6 +5,8 @@ from app.api.v1.endpoints.projects import router as projects_router
 from app.api.v1.endpoints.instructions import router as instructions_router
 from app.api.v1.endpoints.render import router as render_router
 from app.api.v1.endpoints.outputs import router as outputs_router
+from app.api.v1.endpoints.edits import router as edits_router
+from app.api.v1.endpoints.assistant import router as assistant_router
 
 api_v1_router = APIRouter(prefix="/api/v1")
 
@@ -13,6 +15,8 @@ api_v1_router.include_router(health_router)
 api_v1_router.include_router(jobs_router)
 api_v1_router.include_router(projects_router)
 api_v1_router.include_router(instructions_router)
+api_v1_router.include_router(edits_router)
+api_v1_router.include_router(assistant_router)
 api_v1_router.include_router(render_router)
 api_v1_router.include_router(outputs_router)
 

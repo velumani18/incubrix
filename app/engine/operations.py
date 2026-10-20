@@ -58,11 +58,17 @@ def cut_range(
     start_s: float,
     end_s: float,
     transcript: Transcript,
-    time_policy: str | None = None
+    time_policy: str | None = None,
+    snap_to_words: bool = False
 ) -> dict[str, Any]:
     policy = time_policy or timeline.time_policy
     raw_start, raw_end = resolve_span(timeline, start_s, end_s, policy)
-    cut_start, cut_end = snap_cut_to_word_boundaries(raw_start, raw_end, transcript)
+    if snap_to_words and transcript and transcript.words:
+        cut_start, cut_end = snap_cut_to_word_boundaries(raw_start, raw_end, transcript)
+        if cut_start >= cut_end:
+            cut_start, cut_end = raw_start, raw_end
+    else:
+        cut_start, cut_end = raw_start, raw_end
 
     if cut_start >= cut_end:
         raise IncuBrixException(
@@ -195,6 +201,68 @@ def keep_only_range(
         "operation": "keep_only_range",
         "keep_source_start": round(keep_start, 3),
         "keep_source_end": round(keep_end, 3),
+        "time_policy_used": policy,
+        "new_duration_s": timeline.duration_s,
+    }
+
+def mute_range(
+    timeline: Timeline,
+    start_s: float,
+    end_s: float,
+    transcript: Transcript,
+    time_policy: str | None = None,
+    is_muted: bool = True
+) -> dict[str, Any]:
+    policy = time_policy or timeline.time_policy
+    src_start, src_end = resolve_span(timeline, start_s, end_s, policy)
+
+    if src_start >= src_end:
+        raise IncuBrixException(
+            code=ErrorCodes.INSTRUCTION_REJECTED,
+            message=f"Mute range [{start_s}, {end_s}] is invalid or empty.",
+            retryable=False
+        )
+
+    new_segments: list[Segment] = []
+    affected = False
+
+    for seg in timeline.segments:
+        # Segment completely outside mute range
+        if seg.source_end <= src_start or seg.source_start >= src_end:
+            new_segments.append(seg)
+        # Inside
+        elif seg.source_start >= src_start and seg.source_end <= src_end:
+            seg.is_muted = is_muted
+            seg.volume = 0.0 if is_muted else 1.0
+            new_segments.append(seg)
+            affected = True
+        # Overlapping
+        else:
+            pts = sorted(list({seg.source_start, seg.source_end, max(seg.source_start, src_start), min(seg.source_end, src_end)}))
+            for i in range(len(pts) - 1):
+                p1, p2 = pts[i], pts[i+1]
+                in_range = (src_start <= p1 and p2 <= src_end)
+                new_segments.append(
+                    Segment(
+                        segment_id=f"seg_{uuid.uuid4().hex[:8]}",
+                        source_start=p1,
+                        source_end=p2,
+                        speed=seg.speed,
+                        is_muted=is_muted if in_range else seg.is_muted,
+                        volume=0.0 if (in_range and is_muted) else (seg.volume if not in_range else 1.0),
+                        speaker=seg.speaker,
+                    )
+                )
+            affected = True
+
+    timeline.segments = new_segments
+    timeline.recompute()
+    return {
+        "operation": "mute_range",
+        "source_start": round(src_start, 3),
+        "source_end": round(src_end, 3),
+        "is_muted": is_muted,
+        "affected": affected,
         "time_policy_used": policy,
         "new_duration_s": timeline.duration_s,
     }
